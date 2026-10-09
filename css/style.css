@@ -173,8 +173,9 @@
 
 [data-theme="light"] .trust-strip {
   background: rgba(18, 16, 13, 0.5);
-  backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  
   padding: 1.25rem 1.5rem;
   border-radius: var(--radius-md);
   border: 1px solid rgba(207, 168, 89, 0.2);
@@ -287,8 +288,9 @@
 /* Light Theme Navigation & Header Readability Enhancements */
 [data-theme="light"] .site-header {
   background: rgba(252, 251, 248, 0.94);
-  backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  
   border-bottom: 1px solid rgba(150, 111, 30, 0.12);
   box-shadow: 0 2px 12px rgba(45, 35, 20, 0.04);
 }
@@ -353,10 +355,8 @@ body {
       rgba(207, 168, 89, 0.06),
       transparent 50%
     ),
-    radial-gradient(
       ellipse at 15% 85%,
       rgba(207, 168, 89, 0.04),
-      transparent 50%
     );
   background-attachment: fixed;
   overflow-x: hidden;
@@ -482,7 +482,8 @@ ol {
     var(--accent-gold) 100%
   );
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background-clip: text;
+-webkit-text-fill-color: transparent;
 }
 [data-theme="light"] .hero-section .text-gradient,
 [data-theme="light"] .text-gradient {
@@ -493,7 +494,8 @@ ol {
     #cfa859 100%
   );
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background-clip: text;
+-webkit-text-fill-color: transparent;
 }
 
 .section-label {
@@ -566,8 +568,9 @@ ol {
 .site-header.header-sticky {
   padding: 0.75rem 0;
   background: var(--bg-glass-nav);
-  backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  
   border-bottom: 1px solid var(--border-subtle);
   box-shadow: var(--shadow-sm);
   transform: translateY(0);
@@ -684,8 +687,9 @@ ol {
   visibility: hidden;
   transform: translateY(12px);
   transition: all var(--transition-smooth);
-  backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  
   z-index: 1020;
 }
 .nav-item:hover .dropdown-menu {
@@ -793,6 +797,7 @@ ol {
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.7);
+  -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
   z-index: 1004;
   opacity: 0;
@@ -887,6 +892,7 @@ ol {
   background: rgba(255, 255, 255, 0.05);
   color: var(--text-primary);
   border: 1px solid var(--border-medium);
+  -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
 }
 .btn-secondary:hover {
@@ -1006,6 +1012,7 @@ ol {
   text-transform: uppercase;
   color: var(--accent-gold-light);
   margin-bottom: 1.5rem;
+  -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
 }
 
@@ -1138,6 +1145,7 @@ ol {
   position: relative;
   display: flex;
   flex-direction: column;
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
 .kitten-card:hover {
@@ -1183,6 +1191,7 @@ ol {
   display: flex;
   align-items: center;
   justify-content: center;
+  -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
   transition: all var(--transition-fast);
 }
@@ -1458,6 +1467,7 @@ ol {
   background: rgba(26, 23, 18, 0.88);
   border: 1px solid var(--accent-gold);
   color: var(--accent-gold-light);
+  -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
   font-weight: 600;
   letter-spacing: 0.05em;
@@ -1677,8 +1687,9 @@ ol {
   background: rgba(18, 10, 12, 0.82);
   color: var(--accent-gold);
   border: 1px solid rgba(212, 175, 55, 0.45);
-  backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  
   border-radius: var(--radius-full);
   font-size: 0.72rem;
   font-weight: 600;
@@ -1720,8 +1731,9 @@ ol {
   height: 32px;
   border-radius: 50%;
   background: rgba(18, 10, 12, 0.78);
-  backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  
   border: 1px solid rgba(212, 175, 55, 0.35);
   color: var(--accent-gold);
   display: flex;
@@ -2151,8 +2163,9 @@ ol {
   left: 0;
   right: 0;
   background: var(--bg-glass-nav);
-  backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  
   border-top: 1px solid var(--border-subtle);
   padding: 0.75rem 1rem;
   z-index: 999;
@@ -2453,8 +2466,9 @@ ol {
   position: fixed;
   inset: 0;
   background: rgba(18, 16, 13, 0.85);
-  backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  
   z-index: 2050;
   display: flex;
   align-items: center;
@@ -2700,8 +2714,9 @@ ol {
   box-shadow: 0 4px 25px rgba(0, 0, 0, 0.7);
   font-size: 1.6rem;
   line-height: 1;
-  user-select: none;
   -webkit-user-select: none;
+  user-select: none;
+  
 }
 .lightbox-nav-btn:hover,
 .lightbox-nav-btn:focus-visible {
@@ -3382,8 +3397,9 @@ ol {
   height: 38px;
   border-radius: 50%;
   background: rgba(18, 12, 14, 0.82);
-  backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  
   border: 1px solid rgba(212, 175, 55, 0.7);
   color: var(--accent-gold);
   display: flex;
@@ -3577,8 +3593,9 @@ ol {
   height: 40px;
   border-radius: 50%;
   background: rgba(18, 10, 12, 0.78);
-  backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  
   border: 1px solid rgba(212, 175, 55, 0.6);
   color: var(--accent-gold);
   display: flex;
@@ -3609,8 +3626,9 @@ ol {
   height: 36px;
   border-radius: 50%;
   background: rgba(18, 10, 12, 0.82);
-  backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  
   border: 1px solid rgba(212, 175, 55, 0.7);
   color: var(--accent-gold);
   display: flex;
@@ -3636,6 +3654,7 @@ ol {
   background: rgba(0, 0, 0, 0.45);
   padding: 4px 10px;
   border-radius: 20px;
+  -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
 }
 .special-slider-dots .dot {
@@ -3740,8 +3759,9 @@ ol {
   left: 1.15rem;
   padding: 0.38rem 0.9rem;
   background: rgba(18, 10, 12, 0.85);
-  backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  
   border: 1px solid rgba(212, 175, 55, 0.5);
   border-radius: var(--radius-full);
   color: #72f2a7;
@@ -3776,8 +3796,9 @@ ol {
   height: 34px;
   border-radius: 50%;
   background: rgba(18, 10, 12, 0.8);
-  backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  
   border: 1px solid rgba(212, 175, 55, 0.4);
   color: var(--accent-gold);
   display: flex;
