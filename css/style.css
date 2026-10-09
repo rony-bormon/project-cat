@@ -844,9 +844,9 @@ ol {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.6rem;
-  padding: 0.85rem 1.75rem;
-  font-size: var(--text-sm);
+  gap: 0.55rem;
+  padding: 0.7rem 1.45rem;
+  font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 0.03em;
   border-radius: var(--radius-pill);
@@ -854,8 +854,8 @@ ol {
   white-space: nowrap;
 }
 .btn svg {
-  width: 18px;
-  height: 18px;
+  width: 17px;
+  height: 17px;
   transition: transform var(--transition-fast);
 }
 .btn:hover svg {
@@ -1039,6 +1039,10 @@ ol {
   flex-wrap: wrap;
   gap: 1rem;
   align-items: center;
+}
+.hero-cta-group .btn {
+  padding: 0.82rem 1.85rem;
+  font-size: 0.95rem;
 }
 
 /* Trust Strip */
@@ -2207,6 +2211,10 @@ ol {
   );
   border-bottom: 1px solid var(--border-subtle);
   position: relative;
+}
+.page-header .btn {
+  padding: 0.65rem 1.4rem;
+  font-size: 0.84rem;
 }
 .breadcrumbs {
   display: flex;
