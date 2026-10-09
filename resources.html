@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maine Coon Blog & Owner Guides | Majestic Maine Coon Cats</title>
+  <meta name="description" content="Education, expert tips, and stories from our Georgia cattery. Kitten care, grooming, nutrition, behavior, growth timelines, and European Maine Coon heritage.">
+  <link rel="canonical" href="https://majesticmainecooncats.com/blog/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .blog-filter-nav {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 3rem;
+    }
+    .blog-filter-btn {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: var(--text-secondary);
+      padding: 0.5rem 1.25rem;
+      border-radius: var(--radius-full);
+      font-size: var(--text-sm);
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+    .blog-filter-btn:hover,
+    .blog-filter-btn.active {
+      background: var(--accent-gold);
+      color: #1A1712;
+      border-color: var(--accent-gold);
+    }
+    .articles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+    .article-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+    .article-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent-gold);
+    }
+    .article-media {
+      aspect-ratio: 16/10;
+      overflow: hidden;
+      position: relative;
+    }
+    .article-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .article-card:hover .article-img {
+      transform: scale(1.05);
+    }
+    .article-body {
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .article-meta {
+      font-size: 0.8rem;
+      color: var(--accent-gold);
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .article-title {
+      font-family: var(--font-heading);
+      font-size: 1.3rem;
+      color: var(--text-primary);
+      margin-bottom: 0.75rem;
+      line-height: 1.4;
+    }
+    .article-date {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+    }
+    .article-read-btn {
+      margin-top: auto;
+      color: var(--accent-gold);
+      text-decoration: underline;
+      font-weight: 600;
+      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand">
+        <img src="images/mmcc_logo_transparent_v2-e1779806650991.webp" alt="Majestic Maine Coon Cats Logo" class="brand-logo-img">
+        <div class="brand-text">
+          <span class="brand-name">Majestic</span>
+          <span class="brand-tagline">Maine Coon Cats</span>
+        </div>
+      </a>
+
+      <nav class="desktop-nav">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="about-us.html" class="nav-link">About Us</a></li>
+          <li class="nav-item">
+            <a href="available-kittens.html" class="nav-link">Kittens <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+            <div class="dropdown-menu">
+              <a href="available-kittens.html" class="dropdown-link">Available Kittens</a>
+              <a href="waiting-list.html" class="dropdown-link">Waiting List</a>
+              <a href="future-pairings.html" class="dropdown-link">Future Pairings</a>
+              <a href="past-kittens.html" class="dropdown-link">Past Kittens</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="adoption-process.html" class="nav-link">Adoption Process <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+            <div class="dropdown-menu">
+              <a href="adoption-process.html" class="dropdown-link">Adoption Process</a>
+              <a href="application-form.html" class="dropdown-link">Application Form</a>
+              <a href="kitten-contract.html" class="dropdown-link">Maine Coon Kitten Contract</a>
+              <a href="faqs.html" class="dropdown-link">Adoption FAQs</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="kings.html" class="nav-link">Our Cats <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+            <div class="dropdown-menu">
+              <a href="kings.html" class="dropdown-link">Kings (Studs)</a>
+              <a href="queens.html" class="dropdown-link">Queens (Mothers)</a>
+              <a href="retired-adults.html" class="dropdown-link">Retired Adults</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="resources.html" class="nav-link active">Resources <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+            <div class="dropdown-menu">
+              <a href="resources.html" class="dropdown-link">Breed Education &amp; Blog</a>
+              <a href="kitten-care-guide.html" class="dropdown-link">Kitten Care Guide</a>
+              <a href="pet-portraits.html" class="dropdown-link">Custom Laser Portraits</a>
+            </div>
+          </li>
+          <li class="nav-item"><a href="contact-us.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Toggle theme">
+          <svg class="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <svg class="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+        <a href="available-kittens.html" class="btn btn-primary btn-sm desktop-only">Available Kittens</a>
+        <button id="mobileToggleBtn" class="mobile-toggle-btn" aria-label="Open menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-backdrop" id="mobileBackdrop"></div>
+  <aside class="mobile-drawer" id="mobileDrawer">
+    <div class="mobile-nav-top">
+      <ul class="mobile-nav-list">
+        <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+        <li><a href="about-us.html" class="mobile-nav-link">About Us</a></li>
+        <li class="mobile-has-submenu">
+          <a href="#" class="mobile-nav-link">Kittens <span>▾</span></a>
+          <div class="mobile-submenu">
+            <a href="available-kittens.html" class="mobile-sub-link">Available Kittens</a>
+            <a href="waiting-list.html" class="mobile-sub-link">Waiting List</a>
+            <a href="future-pairings.html" class="mobile-sub-link">Future Pairings</a>
+            <a href="past-kittens.html" class="mobile-sub-link">Past Kittens</a>
+          </div>
+        </li>
+        <li class="mobile-has-submenu">
+          <a href="#" class="mobile-nav-link">Adoption Process <span>▾</span></a>
+          <div class="mobile-submenu">
+            <a href="adoption-process.html" class="mobile-sub-link">Adoption Process</a>
+            <a href="application-form.html" class="mobile-sub-link">Application Form</a>
+            <a href="kitten-contract.html" class="mobile-sub-link">Maine Coon Kitten Contract</a>
+            <a href="faqs.html" class="mobile-sub-link">Adoption FAQs</a>
+          </div>
+        </li>
+        <li class="mobile-has-submenu">
+          <a href="#" class="mobile-nav-link">Our Cats <span>▾</span></a>
+          <div class="mobile-submenu">
+            <a href="kings.html" class="mobile-sub-link">Kings (Studs)</a>
+            <a href="queens.html" class="mobile-sub-link">Queens (Mothers)</a>
+            <a href="retired-adults.html" class="mobile-sub-link">Retired Adults</a>
+          </div>
+        </li>
+        <li class="mobile-has-submenu">
+          <a href="#" class="mobile-nav-link">Resources <span>▾</span></a>
+          <div class="mobile-submenu">
+            <a href="resources.html" class="mobile-sub-link">Breed Education &amp; Blog</a>
+            <a href="kitten-care-guide.html" class="mobile-sub-link">Kitten Care Guide</a>
+            <a href="pet-portraits.html" class="mobile-sub-link">Custom Laser Portraits</a>
+          </div>
+        </li>
+        <li><a href="contact-us.html" class="mobile-nav-link">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="mobile-nav-bottom">
+      <a href="tel:+18323317085" class="btn btn-secondary" style="width: 100%; margin-bottom: 0.75rem;">Call / Text (832) 331-7085</a>
+      <a href="available-kittens.html" class="btn btn-primary" style="width: 100%;">View Available Kittens</a>
+    </div>
+  </aside>
+
+  <main id="main-content">
+    <!-- Hero / Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="separator">/</span>
+          <a href="resources.html">Resources</a>
+          <span class="separator">/</span>
+          <span class="current">Blog</span>
+        </nav>
+        <span class="section-label">Maine Coon Insights &amp; Education</span>
+        <h1 class="section-title" style="font-size: var(--text-4xl);">Blog &amp; Owner Guides</h1>
+        <p class="section-subtitle">
+          Education, expert tips, and stories from our cattery. Kitten care, grooming, nutrition, behavior, and everything that makes European Maine Coons extraordinary.
+        </p>
+      </div>
+    </section>
+
+    <!-- Articles Section with Category Filter -->
+    <section class="section">
+      <div class="container">
+        
+        <!-- Category Filter Pills -->
+        <div class="blog-filter-nav">
+          <button class="blog-filter-btn active" data-filter="all">All Articles</button>
+          <button class="blog-filter-btn" data-filter="behavior">Behavior &amp; Training</button>
+          <button class="blog-filter-btn" data-filter="education">Breed Education</button>
+          <button class="blog-filter-btn" data-filter="health">Health &amp; Nutrition</button>
+          <button class="blog-filter-btn" data-filter="updates">Cattery Updates</button>
+        </div>
+
+        <div class="articles-grid" id="articlesGrid">
+          
+          <!-- Article 1: Water Bowls -->
+          <article class="article-card reveal-on-scroll" data-category="behavior">
+            <div class="article-media">
+              <img src="images/maine-coon-kitten-playing-in-water-bowl-768x669.webp" alt="Maine Coon kitten pawing and playing in a water bowl" class="article-img" loading="lazy">
+            </div>
+            <div class="article-body">
+              <span class="article-meta">Behavior &amp; Training · Maine Coon Corner</span>
+              <h2 class="article-title">Why Do Maine Coons Play in Their Water Bowls?</h2>
+              <div class="article-date">September 7, 2026 · By Maria</div>
+              <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">
+                Ever caught your Maine Coon batting water out of their dish or tipping over the fountain? Discover the fascinating natural instincts behind this quirky behavior.
+              </p>
+              <a href="#" class="article-read-btn">Read Article &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Article 2: Growth Timeline -->
+          <article class="article-card reveal-on-scroll" data-category="education">
+            <div class="article-media">
+              <img src="images/maine-coon-growth-timeline-768x1025.webp" alt="Black silver classic tabby Maine Coon female sitting on shelf" class="article-img" loading="lazy">
+            </div>
+            <div class="article-body">
+              <span class="article-meta">Breed Education · Maine Coon Corner</span>
+              <h2 class="article-title">Maine Coon Growth Timeline: From Kitten to Adult</h2>
+              <div class="article-date">August 16, 2026 · By Maria</div>
+              <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">
+                Unlike standard domestic cats, Maine Coons take up to 4 years to fully develop their massive skeletal frames, dense ruffs, and full adult weight.
+              </p>
+              <a href="#" class="article-read-btn">Read Article &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Article 3: History -->
+          <article class="article-card reveal-on-scroll" data-category="education">
+            <div class="article-media">
+              <img src="images/red-a-blue-maine-coon-setting-on-counter-1024x768-1-768x576.webp" alt="Maine Coon cat illustrating the breed’s New England history" class="article-img" loading="lazy">
+            </div>
+            <div class="article-body">
+              <span class="article-meta">Breed Education · Maine Coon Corner</span>
+              <h2 class="article-title">Maine Coon History: From Working Cat to Gentle Giant</h2>
+              <div class="article-date">August 14, 2026 · By Maria</div>
+              <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">
+                From 19th-century New England seafaring ships and rural barn mousers to the world's most beloved domestic giant companion.
+              </p>
+              <a href="#" class="article-read-btn">Read Article &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Article 4: FIP in Cats -->
+          <article class="article-card reveal-on-scroll" data-category="health">
+            <div class="article-media">
+              <img src="images/IMG_5883-1-opt-768x1024.webp" alt="Cat receiving supportive healthcare" class="article-img" loading="lazy">
+            </div>
+            <div class="article-body">
+              <span class="article-meta">Health &amp; Nutrition · Maine Coon Corner</span>
+              <h2 class="article-title">FIP in Cats: Symptoms, Diagnosis and Antiviral Treatment</h2>
+              <div class="article-date">May 15, 2026 · By Maria</div>
+              <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">
+                Understanding Feline Infectious Peritonitis, modern diagnostic methods, and groundbreaking GS-441524 antiviral treatment protocols.
+              </p>
+              <a href="#" class="article-read-btn">Read Article &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Article 5: Polydactyl & Blue Eyes -->
+          <article class="article-card reveal-on-scroll" data-category="education">
+            <div class="article-media">
+              <img src="images/Polydactyl-paw.webp" alt="Polydactyl Maine Coon Paws" class="article-img" loading="lazy">
+            </div>
+            <div class="article-body">
+              <span class="article-meta">Breed Education · Maine Coon Corner</span>
+              <h2 class="article-title">Polydactyl and Blue-Eyed Maine Coons: Genetics &amp; History</h2>
+              <div class="article-date">February 4, 2026 · By Maria</div>
+              <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">
+                Explore the genetics of "mitten paws" (polydactyly) and striking blue eyes in non-white coats, and how ethical breeders protect these rare traits.
+              </p>
+              <a href="#" class="article-read-btn">Read Article &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Article 6: Health Concerns -->
+          <article class="article-card reveal-on-scroll" data-category="health">
+            <div class="article-media">
+              <img src="images/IMG_4713-768x1060.webp" alt="Healthy adult Maine Coon" class="article-img" loading="lazy">
+            </div>
+            <div class="article-body">
+              <span class="article-meta">Health &amp; Nutrition</span>
+              <h2 class="article-title">Maine Coon Health: Common Concerns and Preventive Care</h2>
+              <div class="article-date">January 31, 2026 · By Maria</div>
+              <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">
+                How DNA screening for HCM, SMA, and PKD, alongside regular echocardiograms, safeguards the health of large-breed domestic cats.
+              </p>
+              <a href="#" class="article-read-btn">Read Article &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Article 7: Chirp and Trill -->
+          <article class="article-card reveal-on-scroll" data-category="behavior">
+            <div class="article-media">
+              <img src="images/red-a-blue-maine-coon-setting-on-counter-1024x768-1-768x576.webp" alt="Vocal Maine Coon cat sitting on counter" class="article-img" loading="lazy">
+            </div>
+            <div class="article-body">
+              <span class="article-meta">Behavior &amp; Training · Maine Coon Corner</span>
+              <h2 class="article-title">Why Do Maine Coons Chirp and Trill?</h2>
+              <div class="article-date">January 30, 2026 · By Maria</div>
+              <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">
+                Maine Coons rarely meow — they trill, roll their r's, and chirp like songbirds. Learn what their gentle vocal language means.
+              </p>
+              <a href="#" class="article-read-btn">Read Article &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Article 8: Dog-like Cats -->
+          <article class="article-card reveal-on-scroll" data-category="behavior">
+            <div class="article-media">
+              <img src="images/maine-coon-kitten-playing-in-water-bowl-768x669.webp" alt="Affectionate companion Maine Coon" class="article-img" loading="lazy">
+            </div>
+            <div class="article-body">
+              <span class="article-meta">Behavior &amp; Training · Breed Education</span>
+              <h2 class="article-title">Why Are Maine Coons Called "Dog-Like" Cats?</h2>
+              <div class="article-date">January 24, 2026 · By Maria</div>
+              <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">
+                Playing fetch, following you room to room, greeting you at the front door, and riding in cars — why these giants act more like canines.
+              </p>
+              <a href="#" class="article-read-btn">Read Article &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Article 9: Zoyka's Kittens Update -->
+          <article class="article-card reveal-on-scroll" data-category="updates">
+            <div class="article-media">
+              <img src="images/Newborn-Maine-Coon-kittens-and-a-white-blanket.webp" alt="Newborn Maine Coon kittens on a white blanket" class="article-img" loading="lazy">
+            </div>
+            <div class="article-body">
+              <span class="article-meta">Cattery Updates</span>
+              <h2 class="article-title">Zoyka’s Maine Coon Kittens at One Week Old</h2>
+              <div class="article-date">January 24, 2026 · By Maria</div>
+              <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">
+                A peek into our nursery: nursing, daily weight gains, cozy nursery temperature control, and early bonding milestones.
+              </p>
+              <a href="#" class="article-read-btn">Read Article &rarr;</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Start Here / Guides for New Families -->
+    <section class="section" style="background: var(--bg-surface); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+      <div class="container">
+        <div class="section-header" style="text-align: center; margin-bottom: 3.5rem;">
+          <span class="section-label">Start Here</span>
+          <h2 class="section-title" style="font-size: var(--text-3xl);">New to Maine Coons?</h2>
+          <p class="section-subtitle" style="margin: 0 auto; max-width: 650px;">
+            Not sure where to begin? These guides are a great place to start for future Majestic Maine Coon families.
+          </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+          
+          <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 2rem;">
+            <h3 style="font-family: var(--font-heading); color: var(--accent-gold); font-size: 1.25rem; margin-bottom: 0.5rem;">Choosing &amp; Buying</h3>
+            <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.25rem;">Everything to know before you bring a kitten home.</p>
+            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.9rem;">
+              <li><a href="available-kittens.html" style="color: var(--text-primary); text-decoration: underline;">Choosing Your Kitten</a></li>
+              <li><a href="faqs.html" style="color: var(--text-primary); text-decoration: underline;">Avoiding Maine Coon Scams</a></li>
+              <li><a href="about-us.html" style="color: var(--text-primary); text-decoration: underline;">American vs. European Lines</a></li>
+            </ul>
+          </div>
+
+          <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 2rem;">
+            <h3 style="font-family: var(--font-heading); color: var(--accent-gold); font-size: 1.25rem; margin-bottom: 0.5rem;">Care &amp; Coat</h3>
+            <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.25rem;">Daily care, grooming, and coat tips for your giant.</p>
+            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.9rem;">
+              <li><a href="kitten-care-guide.html" style="color: var(--text-primary); text-decoration: underline;">Kitten Care Essentials</a></li>
+              <li><a href="kitten-care-guide.html#grooming" style="color: var(--text-primary); text-decoration: underline;">Winter Grooming Protocols</a></li>
+              <li><a href="future-pairings.html" style="color: var(--text-primary); text-decoration: underline;">Shaded &amp; Smoke Coat Colors</a></li>
+            </ul>
+          </div>
+
+          <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 2rem;">
+            <h3 style="font-family: var(--font-heading); color: var(--accent-gold); font-size: 1.25rem; margin-bottom: 0.5rem;">From Our Cattery</h3>
+            <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.25rem;">News, litters, and life at Majestic Maine Coon Cats.</p>
+            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.9rem;">
+              <li><a href="available-kittens.html" style="color: var(--text-primary); text-decoration: underline;">Current Litters in Nursery</a></li>
+              <li><a href="about-us.html#home-gallery" style="color: var(--text-primary); text-decoration: underline;">A Peek Inside Our Home</a></li>
+              <li><a href="waiting-list.html" style="color: var(--text-primary); text-decoration: underline;">Waiting List Roadmap</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Banner -->
+    <section class="section" style="text-align: center;">
+      <div class="container" style="max-width: 800px;">
+        <span class="section-label">Find Your Kitten</span>
+        <h2 class="section-title" style="font-size: var(--text-3xl); margin-bottom: 1rem;">Looking for a Maine Coon kitten?</h2>
+        <p style="color: var(--text-secondary); font-size: var(--text-lg); line-height: 1.7; margin-bottom: 2rem;">
+          Explore our currently available European Maine Coon kittens and find your new furry family member from our TICA &amp; CFA registered cattery.
+        </p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="available-kittens.html" class="btn btn-primary">View Available Kittens</a>
+          <a href="contact-us.html" class="btn btn-secondary">Contact Us</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-col-brand">
+          <div class="brand footer-brand">
+            <img src="images/mmcc_logo_transparent_v2-e1779806650991.webp" alt="Majestic Maine Coon Cats Logo" class="brand-logo-img">
+            <div class="brand-text">
+              <span class="brand-name">Majestic</span>
+              <span class="brand-tagline">Maine Coon Cats</span>
+            </div>
+          </div>
+          <p class="footer-desc">
+            Ethical breeder of European Maine Coon cats in Canton, Georgia. TICA and CFA registered cattery dedicated to health, wild feral beauty, and dog-like companion temperaments.
+          </p>
+          <div class="footer-badges">
+            <span class="cert-pill">TICA Registered</span>
+            <span class="cert-pill">CFA Cattery</span>
+            <span class="cert-pill">DNA Tested Lines</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-title">Kittens &amp; Parents</h4>
+          <ul class="footer-links">
+            <li><a href="available-kittens.html" class="footer-link">Available Kittens</a></li>
+            <li><a href="waiting-list.html" class="footer-link">Waiting List</a></li>
+            <li><a href="future-pairings.html" class="footer-link">Future Pairings</a></li>
+            <li><a href="past-kittens.html" class="footer-link">Past Kittens</a></li>
+            <li><a href="kings.html" class="footer-link">Our Kings</a></li>
+            <li><a href="queens.html" class="footer-link">Our Queens</a></li>
+            <li><a href="retired-adults.html" class="footer-link">Retired Adults</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-title">Adoption &amp; Info</h4>
+          <ul class="footer-links">
+            <li><a href="about-us.html" class="footer-link">About Our Cattery</a></li>
+            <li><a href="application-form.html" class="footer-link">Application Form</a></li>
+            <li><a href="kitten-contract.html" class="footer-link">Maine Coon Contract</a></li>
+            <li><a href="faqs.html" class="footer-link">Frequently Asked Questions</a></li>
+            <li><a href="kitten-care-guide.html" class="footer-link">Kitten Care Guide</a></li>
+            <li><a href="pet-portraits.html" class="footer-link">Custom Laser Portraits</a></li>
+            <li><a href="resources.html" class="footer-link">Blog &amp; Breed Insights</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-title">Contact &amp; Location</h4>
+          <p class="footer-contact-item">
+            <strong>Location:</strong> Canton, Georgia, USA
+          </p>
+          <p class="footer-contact-item">
+            <strong>Phone / Text:</strong> <a href="tel:+18323317085" class="footer-link">+1 (832) 331-7085</a>
+          </p>
+          <p class="footer-contact-item">
+            <strong>Email:</strong> <a href="mailto:pili@majesticmainecooncats.com" class="footer-link">pili@majesticmainecooncats.com</a>
+          </p>
+          <div class="social-links" style="margin-top: 1rem; display: flex; gap: 0.75rem;">
+            <a href="https://www.facebook.com/MajesticMaineCoonCats/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95C18.05 21.45 22 17.19 22 12z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/majesticmainecooncats/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://www.youtube.com/channel/UC4Lv4lbCrI6nHVwVmNrjK8Q/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+            <a href="https://www.tiktok.com/@majesticmainecooncats" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="TikTok">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.82 4.49 6.3 6.3 0 0 0 1.87-4.49V8.62a8.28 8.28 0 0 0 4.84 1.57V6.74a4.84 4.84 0 0 1-.94-.05z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Majestic Maine Coon Cats. All rights reserved. TICA &amp; CFA Registered Cattery.</p>
+        <p>Website Redesigned &amp; Developed with &#9829; by <a href="https://ronybormon.com" target="_blank" rel="noopener noreferrer" style="color: var(--accent-gold); text-decoration: underline; font-weight: 600;">Rony Bormon</a></p>
+        <p>Canton, Georgia · Ethically Raised European Maine Coons</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Sticky Mobile Bottom CTA Bar -->
+  <div class="sticky-mobile-cta" role="complementary" aria-label="Quick Mobile Actions">
+    <a href="tel:+18323317085" class="btn btn-secondary">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+      Call / Text
+    </a>
+    <a href="available-kittens.html" class="btn btn-primary">
+      Reserve a Kitten
+    </a>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="backToTopBtn" class="back-to-top" aria-label="Back to top of page" title="Scroll to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Blog filtering functionality
+    const filterBtns = document.querySelectorAll('.blog-filter-btn');
+    const articles = document.querySelectorAll('.article-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.dataset.filter;
+        articles.forEach(article => {
+          if (filter === 'all' || article.dataset.category === filter) {
+            article.style.display = 'flex';
+          } else {
+            article.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adoption Process | Majestic Maine Coon Cats</title>
+  <meta name="description" content="Understand our European Maine Coon adoption process from application to pickup in Canton, Georgia. Clear pricing, health testing, and lifetime support.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Adoption Process | Majestic Maine Coon Cats">
+  <meta property="og:description" content="Understand our European Maine Coon adoption process from application to pickup in Canton, Georgia. Clear pricing, health testing, and lifetime support.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://majesticmainecooncats.com/adoption-process.html">
+  <meta property="og:image" content="images/mmcc_logo_transparent_v2-e1779806650991.webp">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/webp" href="images/mmcc_logo_transparent_v2-e1779806650991.webp">
+
+  <!-- Fonts & CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* ==========================================================================
+       Adoption Process Page Dedicated Styles
+       ========================================================================== */
+    .ap-philosophy-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+    .ap-quote-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-gold);
+      border-radius: var(--radius-xl);
+      padding: clamp(2rem, 4vw, 3rem);
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+      position: relative;
+    }
+    .ap-steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.75rem;
+      margin-bottom: 2.5rem;
+    }
+    .ap-step-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-gold);
+      border-radius: var(--radius-lg);
+      padding: 2.25rem 2rem;
+      display: flex;
+      flex-direction: column;
+      transition: transform var(--transition-smooth), border-color var(--transition-smooth), box-shadow var(--transition-smooth);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    }
+    .ap-step-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--accent-gold-light);
+      box-shadow: 0 16px 36px rgba(212, 175, 55, 0.16);
+    }
+    .ap-step-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.25rem;
+    }
+    .ap-step-badge {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(212, 175, 55, 0.12);
+      border: 1px solid var(--border-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-gold);
+    }
+    .ap-step-badge svg {
+      width: 22px;
+      height: 22px;
+    }
+    .ap-step-number {
+      font-family: var(--font-heading);
+      font-size: 1.85rem;
+      font-weight: 700;
+      color: var(--accent-gold);
+      line-height: 1;
+      opacity: 0.85;
+    }
+    .ap-step-title {
+      font-family: var(--font-heading);
+      font-size: 1.3rem;
+      color: var(--text-primary);
+      margin-bottom: 0.75rem;
+      font-weight: 600;
+    }
+    .ap-step-desc {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    /* Reservation Fee Banner */
+    .ap-reservation-banner {
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.14) 0%, rgba(20, 5, 8, 0.95) 100%);
+      border: 1px solid var(--accent-gold);
+      border-radius: var(--radius-xl);
+      padding: 2.25rem 2.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      margin-top: 1.5rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    }
+    .ap-reservation-info h3 {
+      font-family: var(--font-heading);
+      font-size: clamp(1.25rem, 2.5vw, 1.65rem);
+      color: var(--accent-gold-light);
+      margin-bottom: 0.4rem;
+    }
+    .ap-reservation-info p {
+      color: var(--text-secondary);
+      font-size: 0.98rem;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    /* Side-by-side Pricing Cards */
+    .ap-pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2.5rem;
+      max-width: 1060px;
+      margin: 0 auto;
+    }
+    .ap-price-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-gold);
+      border-radius: var(--radius-xl);
+      padding: clamp(2.25rem, 4vw, 3.25rem);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+      transition: transform var(--transition-smooth), box-shadow var(--transition-smooth), border-color var(--transition-smooth);
+    }
+    .ap-price-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 45px rgba(212, 175, 55, 0.18);
+      border-color: var(--accent-gold-light);
+    }
+    .ap-price-card.featured {
+      border: 2px solid var(--accent-gold);
+      background: linear-gradient(180deg, rgba(212, 175, 55, 0.08) 0%, rgba(20, 5, 8, 0.9) 100%);
+    }
+    .ap-price-badge-top {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-dark));
+      color: #12100d;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.4rem 1.25rem;
+      border-radius: var(--radius-full);
+      box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+      white-space: nowrap;
+    }
+    .ap-price-header {
+      text-align: center;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border-subtle);
+      margin-bottom: 2rem;
+    }
+    .ap-price-type {
+      font-size: 0.85rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent-gold);
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+    }
+    .ap-price-figure {
+      font-family: var(--font-heading);
+      font-size: clamp(2.5rem, 5vw, 3.75rem);
+      color: var(--text-primary);
+      font-weight: 700;
+      line-height: 1;
+      margin-bottom: 0.75rem;
+    }
+    .ap-price-subtext {
+      color: var(--text-secondary);
+      font-size: 0.92rem;
+      margin: 0;
+    }
+    .ap-features-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 2.5rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      flex-grow: 1;
+    }
+    .ap-feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.85rem;
+      color: var(--text-primary);
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+    .ap-feature-icon {
+      color: var(--accent-gold);
+      flex-shrink: 0;
+      margin-top: 0.15rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      .ap-philosophy-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+      .ap-steps-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .ap-pricing-grid {
+        grid-template-columns: 1fr;
+      }
+      .ap-reservation-banner {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+    @media (max-width: 640px) {
+      .ap-steps-grid {
+        grid-template-columns: 1fr;
+      }
+      .ap-reservation-banner {
+        padding: 1.75rem 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand">
+        <img src="images/mmcc_logo_transparent_v2-e1779806650991.webp" alt="Majestic Maine Coon Cats Logo" class="brand-logo-img">
+        <div class="brand-text">
+          <span class="brand-name">Majestic</span>
+          <span class="brand-tagline">Maine Coon Cats</span>
+        </div>
+      </a>
+
+      <nav class="desktop-nav">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="about-us.html" class="nav-link">About Us</a></li>
+          <li class="nav-item">
+            <a href="available-kittens.html" class="nav-link">Kittens <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+            <div class="dropdown-menu">
+              <a href="available-kittens.html" class="dropdown-link">Available Kittens</a>
+              <a href="waiting-list.html" class="dropdown-link">Waiting List</a>
+              <a href="future-pairings.html" class="dropdown-link">Future Pairings</a>
+              <a href="past-kittens.html" class="dropdown-link">Past Kittens</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="adoption-process.html" class="nav-link active">Adoption Process <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+            <div class="dropdown-menu">
+              <a href="adoption-process.html" class="dropdown-link">Overview &amp; Pricing</a>
+              <a href="application-form.html" class="dropdown-link">Application Form</a>
+              <a href="kitten-contract.html" class="dropdown-link">Maine Coon Kitten Contract</a>
+              <a href="faqs.html" class="dropdown-link">Adoption FAQs</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="kings.html" class="nav-link">Our Cats <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+            <div class="dropdown-menu">
+              <a href="kings.html" class="dropdown-link">Kings (Studs)</a>
+              <a href="queens.html" class="dropdown-link">Queens (Mothers)</a>
+              <a href="retired-adults.html" class="dropdown-link">Retired Adults</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="resources.html" class="nav-link">Resources <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+            <div class="dropdown-menu">
+              <a href="resources.html" class="dropdown-link">Breed Education &amp; Blog</a>
+              <a href="kitten-care-guide.html" class="dropdown-link">Kitten Care Guide</a>
+              <a href="pet-portraits.html" class="dropdown-link">Custom Laser Portraits</a>
+            </div>
+          </li>
+          <li class="nav-item"><a href="contact-us.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Toggle theme">
+          <svg class="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <svg class="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+        <a href="available-kittens.html" class="btn btn-primary btn-sm desktop-only">Available Kittens</a>
+        <button id="mobileToggleBtn" class="mobile-toggle-btn" aria-label="Open menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-backdrop" id="mobileBackdrop"></div>
+  <aside class="mobile-drawer" id="mobileDrawer">
+    <div class="mobile-nav-top">
+      <ul class="mobile-nav-list">
+        <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+        <li><a href="about-us.html" class="mobile-nav-link">About Us</a></li>
+        <li class="mobile-has-submenu">
+          <a href="#" class="mobile-nav-link">Kittens <span>▾</span></a>
+          <div class="mobile-submenu">
+            <a href="available-kittens.html" class="mobile-sub-link">Available Kittens</a>
+            <a href="waiting-list.html" class="mobile-sub-link">Waiting List</a>
+            <a href="future-pairings.html" class="mobile-sub-link">Future Pairings</a>
+            <a href="past-kittens.html" class="mobile-sub-link">Past Kittens</a>
+          </div>
+        </li>
+        <li class="mobile-has-submenu">
+          <a href="#" class="mobile-nav-link">Adoption Process <span>▾</span></a>
+          <div class="mobile-submenu">
+            <a href="adoption-process.html" class="mobile-sub-link">Overview &amp; Pricing</a>
+            <a href="application-form.html" class="mobile-sub-link">Application Form</a>
+            <a href="kitten-contract.html" class="mobile-sub-link">Maine Coon Kitten Contract</a>
+            <a href="faqs.html" class="mobile-sub-link">Adoption FAQs</a>
+          </div>
+        </li>
+        <li class="mobile-has-submenu">
+          <a href="#" class="mobile-nav-link">Our Cats <span>▾</span></a>
+          <div class="mobile-submenu">
+            <a href="kings.html" class="mobile-sub-link">Kings (Studs)</a>
+            <a href="queens.html" class="mobile-sub-link">Queens (Mothers)</a>
+            <a href="retired-adults.html" class="mobile-sub-link">Retired Adults</a>
+          </div>
+        </li>
+        <li class="mobile-has-submenu">
+          <a href="#" class="mobile-nav-link">Resources <span>▾</span></a>
+          <div class="mobile-submenu">
+            <a href="resources.html" class="mobile-sub-link">Breed Education &amp; Blog</a>
+            <a href="kitten-care-guide.html" class="mobile-sub-link">Kitten Care Guide</a>
+            <a href="pet-portraits.html" class="mobile-sub-link">Custom Laser Portraits</a>
+          </div>
+        </li>
+        <li><a href="contact-us.html" class="mobile-nav-link">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="mobile-nav-bottom">
+      <a href="tel:+18323317085" class="btn btn-secondary" style="width: 100%; margin-bottom: 0.75rem;">Call / Text (832) 331-7085</a>
+      <a href="available-kittens.html" class="btn btn-primary" style="width: 100%;">View Available Kittens</a>
+    </div>
+  </aside>
+
+  <main id="main-content">
+    <!-- Hero / Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="separator">/</span>
+          <span class="current">Adoption Process</span>
+        </nav>
+        <span class="section-label">Your Journey Begins Here</span>
+        <h1 class="section-title" style="font-size: var(--text-4xl);">Adoption Process</h1>
+        <p class="section-subtitle">
+          We believe the adoption experience should be as special as the kitten you bring home. Here’s exactly how it works.
+        </p>
+        <div style="display: flex; gap: 1rem; justify-content: flex-start; flex-wrap: wrap; margin-top: 1.5rem;">
+          <a href="application-form.html" class="btn btn-primary btn-sm">Start Your Application</a>
+          <a href="waiting-list.html" class="btn btn-secondary btn-sm">Join the Waiting List</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Philosophy: Adoption with Heart -->
+    <section class="section">
+      <div class="container">
+        <div class="ap-philosophy-grid">
+          <div class="reveal-on-scroll">
+            <span class="section-label">Our Philosophy</span>
+            <h2 class="section-title" style="font-size: clamp(2rem, 3.5vw, 2.75rem); margin-bottom: 1.25rem;">Adoption with Heart</h2>
+            <p style="color: var(--text-secondary); line-height: 1.8; font-size: 1.05rem; margin-bottom: 1.25rem;">
+              We don’t operate like a pet store. Every adoption begins with an authentic conversation, and every kitten is placed in a home we truly believe is the right fit — not simply the first to inquire.
+            </p>
+            <p style="color: var(--text-secondary); line-height: 1.8; font-size: 1.05rem; margin-bottom: 1.5rem;">
+              This isn’t about gatekeeping. It’s about knowing our kittens and knowing our families — and making sure the match is one that lasts a lifetime of companionship, health, and mutual happiness.
+            </p>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+              <span class="cert-pill">TICA Registered</span>
+              <span class="cert-pill">CFA Cattery</span>
+              <span class="cert-pill">Raised Underfoot</span>
+            </div>
+          </div>
+
+          <div class="ap-quote-card reveal-on-scroll">
+            <div style="font-size: 3rem; color: var(--accent-gold); line-height: 1; font-family: var(--font-heading); margin-bottom: 0.75rem;">“</div>
+            <p style="font-family: var(--font-heading); font-size: 1.35rem; color: var(--accent-gold-light); font-style: italic; line-height: 1.6; margin-bottom: 1.5rem;">
+              Every family who welcomes one of our kittens becomes part of ours.
+            </p>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+              <div style="width: 44px; height: 44px; border-radius: 50%; background: var(--accent-gold); color: #12100d; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.1rem;">
+                P
+              </div>
+              <div>
+                <h4 style="margin: 0; font-size: 1rem; color: var(--text-primary); font-family: var(--font-heading);">Maria (Pili) Hoeksema</h4>
+                <p style="margin: 0; font-size: 0.85rem; color: var(--text-muted);">Founder &amp; Dedicated Breeder</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How Adoption Works (6 Steps) -->
+    <section class="section section-alt" id="how-it-works">
+      <div class="container">
+        <div class="section-header text-center reveal-on-scroll">
+          <span class="section-label">Step-By-Step Journey</span>
+          <h2 class="section-title">How Adoption Works</h2>
+          <p class="section-subtitle mx-auto">
+            Six steps from your first application to a lifetime of breeder support.
+          </p>
+        </div>
+
+        <div class="ap-steps-grid">
+          <!-- Step 01 -->
+          <div class="ap-step-card reveal-on-scroll">
+            <div class="ap-step-top">
+              <div class="ap-step-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+              </div>
+              <span class="ap-step-number">01</span>
+            </div>
+            <h3 class="ap-step-title">Submit Your Application</h3>
+            <p class="ap-step-desc">
+              Complete our adoption application form, telling us about your household, lifestyle, and what you’re looking for in a Maine Coon companion. We read every application personally.
+            </p>
+          </div>
+
+          <!-- Step 02 -->
+          <div class="ap-step-card reveal-on-scroll">
+            <div class="ap-step-top">
+              <div class="ap-step-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              </div>
+              <span class="ap-step-number">02</span>
+            </div>
+            <h3 class="ap-step-title">Personal Conversation</h3>
+            <p class="ap-step-desc">
+              We’ll reach out to schedule a call or video chat — your chance to ask every question and for us to learn about your family. No pressure, ever.
+            </p>
+          </div>
+
+          <!-- Step 03 -->
+          <div class="ap-step-card reveal-on-scroll">
+            <div class="ap-step-top">
+              <div class="ap-step-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>
+              </div>
+              <span class="ap-step-number">03</span>
+            </div>
+            <h3 class="ap-step-title">Matching &amp; Deposit</h3>
+            <p class="ap-step-desc">
+              Once we’ve found your ideal match from a current or upcoming litter, a deposit secures your kitten. You’ll receive regular photos and updates as they grow.
+            </p>
+          </div>
+
+          <!-- Step 04 -->
+          <div class="ap-step-card reveal-on-scroll">
+            <div class="ap-step-top">
+              <div class="ap-step-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7h-7"></path><path d="M14 17H5"></path><circle cx="17" cy="17" r="3"></circle><circle cx="7" cy="7" r="3"></circle></svg>
+              </div>
+              <span class="ap-step-number">04</span>
+            </div>
+            <h3 class="ap-step-title">Pre-Departure Prep</h3>
+            <p class="ap-step-desc">
+              We’ll share our recommended supplies list, nutrition guide, and everything you need to prepare. We want day one in your home to be smooth, joyful, and magical.
+            </p>
+          </div>
+
+          <!-- Step 05 -->
+          <div class="ap-step-card reveal-on-scroll">
+            <div class="ap-step-top">
+              <div class="ap-step-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+              </div>
+              <span class="ap-step-number">05</span>
+            </div>
+            <h3 class="ap-step-title">Homecoming at 12–14 Weeks</h3>
+            <p class="ap-step-desc">
+              Your kitten arrives fully vaccinated, dewormed, microchipped, with complete health records and a written contract. This is a unforgettable day of celebration.
+            </p>
+          </div>
+
+          <!-- Step 06 -->
+          <div class="ap-step-card reveal-on-scroll">
+            <div class="ap-step-top">
+              <div class="ap-step-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              </div>
+              <span class="ap-step-number">06</span>
+            </div>
+            <h3 class="ap-step-title">Lifetime of Support</h3>
+            <p class="ap-step-desc">
+              Our relationship doesn’t end at adoption. We’re here for nutrition advice, health guidance, and celebrating every milestone — for the life of your cat.
+            </p>
+          </div>
+        </div>
+
+        <!-- Reservation Banner -->
+        <div class="ap-reservation-banner reveal-on-scroll">
+          <div class="ap-reservation-info">
+            <h3>✦ A $350 reservation fee secures your kitten</h3>
+            <p>The reservation fee is fully applied toward your kitten’s total adoption purchase price upon pickup.</p>
+          </div>
+          <div>
+            <a href="application-form.html" class="btn btn-primary" style="white-space: nowrap;">Apply for Adoption</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing & What's Included -->
+    <section class="section" id="pricing">
+      <div class="container">
+        <div class="section-header text-center reveal-on-scroll">
+          <span class="section-label">Transparent Investment</span>
+          <h2 class="section-title">Pricing &amp; What’s Included</h2>
+          <p class="section-subtitle mx-auto">
+            One clear price for every pet kitten. Full breeding rights are available exclusively to approved ethical catteries.
+          </p>
+        </div>
+
+        <div class="ap-pricing-grid">
+          <!-- Card 1: Pet Kitten -->
+          <div class="ap-price-card featured reveal-on-scroll">
+            <div class="ap-price-badge-top">Most Popular Choice</div>
+            <div class="ap-price-header">
+              <div class="ap-price-type">Pet Companion</div>
+              <div class="ap-price-figure">$3,200</div>
+              <p class="ap-price-subtext">Spay / Neuter Agreement Required</p>
+            </div>
+
+            <ul class="ap-features-list">
+              <li class="ap-feature-item">
+                <span class="ap-feature-icon">✦</span>
+                <span><strong>Official TICA Registration Papers</strong> with authentic breeder slip</span>
+              </li>
+              <li class="ap-feature-item">
+                <span class="ap-feature-icon">✦</span>
+                <span><strong>1-Year Written Health Guarantee</strong> covering congenital &amp; genetic conditions</span>
+              </li>
+              <li class="ap-feature-item">
+                <span class="ap-feature-icon">✦</span>
+                <span><strong>Two Rounds of Core Vaccinations</strong> administered by licensed veterinarian</span>
+              </li>
+              <li class="ap-feature-item">
+                <span class="ap-feature-icon">✦</span>
+                <span><strong>Two Complete Veterinary Exams</strong> and signed health certificate</span>
+              </li>
+              <li class="ap-feature-item">
+                <span class="ap-feature-icon">✦</span>
+                <span><strong>Full Deworming &amp; Flea Treatment</strong> up-to-date at departure</span>
+              </li>
+              <li class="ap-feature-item">
+                <span class="ap-feature-icon">✦</span>
+                <span><strong>Lifetime Microchip</strong> pre-implanted and registered</span>
+              </li>
+              <li class="ap-feature-item">
+                <span class="ap-feature-icon">✦</span>
+                <span><strong>Kitten Starter Pack</strong> with familiar scent blanket &amp; transition food</span>
+              </li>
+              <li class="ap-feature-item">
+                <span class="ap-feature-icon">✦</span>
+                <span><strong>1 Month Free Trupanion Pet Insurance</strong> certificate included</span>
+              </li>
+              <li class="ap-feature-item">
+                <span class="ap-feature-icon">✦</span>
+                <span><strong>Direct Lifetime Breeder Support</strong> from Pili for any questions</span>
+              </li>
+            </ul>
+
+            <div style="margin-top: auto;">
+              <a href="application-form.html" class="btn btn-primary" style="width: 100%;">Apply for Pet Kitten</a>
+            </div>
+          </div>
+
+          <!-- Card 2: Breeding Rights -->
+          <div class="ap-price-card reveal-on-scroll">
+            <div class="ap-price-header">
+              <div class="ap-price-type">Breeding Program</div>
+              <div class="ap-price-figure">$5,500</div>
+              <p class="ap-price-subtext">For Approved Registered Catteries</p>
+            </div>
+
+            <ul class="ap-features-list">
+              <li class="ap-feature-item">
+                <span class="ap-feature-icon">✦</span>
+                <span><strong>Full Breeding Rights Granted</strong> for approved females &amp; males</span>
+              </li>
+              <li class="ap-feature-item">
+                <span class="ap-feature-icon">✦</span>
+                <span><strong>Everything Included in Pet Package</strong> plus advanced documentation</span>
+              </li>
+              <li class="ap-feature-item">
+                <span class="ap-feature-icon">✦</span>
+                <span><strong>Full Genetic DNA Test Panel</strong> (HCM, SMA, PKD, PK-Def, etc.)</span>
+              </li>
+              <li class="ap-feature-item">
+                <span class="ap-feature-icon">✦</span>
+                <span><strong>Certified European Pedigree Papers</strong> from champion lineage</span>
+              </li>
+              <li class="ap-feature-item">
+                <span class="ap-feature-icon">✦</span>
+                <span><strong>Ongoing Breeding Mentorship</strong> &amp; lineage genetics counseling</span>
+              </li>
+              <li class="ap-feature-item">
+                <span class="ap-feature-icon">✦</span>
+                <span><strong>Cattery Setup Guidance</strong> &amp; ethical pairing advice</span>
+              </li>
+              <li class="ap-feature-item">
+                <span class="ap-feature-icon">✦</span>
+                <span><strong>Strict Quality Selection:</strong> Breeding prices reflect superior standard — not every kitten is placed with rights</span>
+              </li>
+            </ul>
+
+            <div style="margin-top: auto;">
+              <a href="contact-us.html" class="btn btn-secondary" style="width: 100%;">Inquire for Breeding Rights</a>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 2.5rem; color: var(--text-muted); font-size: 0.9rem;">
+          Breeding prices reflect extraordinary quality. Breeding rights are priced higher because your cattery will proudly carry our bloodlines forward.
+        </div>
+      </div>
+    </section>
+
+    <!-- Final Call to Action -->
+    <section class="section section-alt" style="border-top: 1px solid var(--border-color);">
+      <div class="container" style="max-width: 850px; text-align: center;">
+        <span class="section-label">Ready to Begin?</span>
+        <h2 class="section-title" style="font-size: clamp(2rem, 3.5vw, 2.75rem); margin-bottom: 1.25rem;">Start Your Application Today</h2>
+        <p style="color: var(--text-secondary); line-height: 1.8; font-size: 1.05rem; margin-bottom: 2rem;">
+          We review every application personally and respond within 24–48 hours. Take the first step toward welcoming a gentle giant into your home.
+        </p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="application-form.html" class="btn btn-primary btn-lg">Complete Application</a>
+          <a href="contact-us.html" class="btn btn-secondary btn-lg">Ask a Question First</a>
+          <a href="faqs.html" class="btn btn-secondary btn-lg">View FAQs</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <a href="index.html" class="brand" style="margin-bottom: 1.25rem;">
+            <img src="images/mmcc_logo_transparent_v2-e1779806650991.webp" alt="Majestic Maine Coon Cats Logo" class="brand-logo-img">
+            <div class="brand-text">
+              <span class="brand-name">Majestic</span>
+              <span class="brand-tagline">Maine Coon Cats</span>
+            </div>
+          </a>
+          <p class="footer-brand-desc">
+            A boutique TICA and CFA registered European Maine Coon cattery located in Canton, Georgia. Dedicated to health testing, ethical breeding, and affectionate companionship.
+          </p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/MajesticMaineCoonCats/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/majesticmainecooncats/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="https://www.tiktok.com/@majesticmainecooncats" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="TikTok">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 3 15.68 6.34 6.34 0 0 0 9.35 22a6.33 6.33 0 0 0 6.34-6.32V9.37a8.16 8.16 0 0 0 4.9 1.62v-3.5a4.85 4.85 0 0 1-1-.8z"/></svg>
+            </a>
+            <a href="https://www.youtube.com/channel/UC4Lv4lbCrI6nHVwVmNrjK8Q/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.43zM9.75 15.02V8.48l5.75 3.27-5.75 3.27z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="about-us.html" class="footer-link">About Us</a></li>
+            <li><a href="available-kittens.html" class="footer-link">Kittens</a></li>
+            <li><a href="adoption-process.html" class="footer-link">Adoption Process</a></li>
+            <li><a href="faqs.html" class="footer-link">FAQs</a></li>
+            <li><a href="kings.html" class="footer-link">Kings</a></li>
+            <li><a href="queens.html" class="footer-link">Queens</a></li>
+            <li><a href="retired-adults.html" class="footer-link">Retired Adults</a></li>
+            <li><a href="resources.html" class="footer-link">Blog</a></li>
+            <li><a href="contact-us.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Adoption &amp; Care</h4>
+          <ul class="footer-links">
+            <li><a href="adoption-process.html" class="footer-link">Process Overview</a></li>
+            <li><a href="application-form.html" class="footer-link">Adoption Application</a></li>
+            <li><a href="kitten-contract.html" class="footer-link">Maine Coon Contract</a></li>
+            <li><a href="waiting-list.html" class="footer-link">Join Waiting List</a></li>
+            <li><a href="future-pairings.html" class="footer-link">Future Pairings</a></li>
+            <li><a href="past-kittens.html" class="footer-link">Past Kittens Gallery</a></li>
+            <li><a href="kitten-care-guide.html" class="footer-link">Kitten Care Guide</a></li>
+            <li><a href="pet-portraits.html" class="footer-link">Custom Wood Pet Portraits</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Get in Touch</h4>
+          <ul class="footer-links">
+            <li style="color: var(--text-secondary); font-size: var(--text-sm);">
+              <strong>Location:</strong> Canton, Georgia 30114
+            </li>
+            <li>
+              <a href="tel:+18323317085" class="footer-link">
+                <strong>Call/Text:</strong> +1 (832) 331-7085
+              </a>
+            </li>
+            <li>
+              <a href="mailto:pili@majesticmainecooncats.com" class="footer-link">
+                <strong>Email:</strong> pili@majesticmainecooncats.com
+              </a>
+            </li>
+            <li><a href="contact-us.html" class="footer-link">Contact Form</a></li>
+            <li><a href="available-kittens.html" class="footer-link" style="color: var(--accent-gold); font-weight: 600;">Reserve a Kitten &rarr;</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Majestic Maine Coon Cats. All rights reserved. TICA &amp; CFA Registered Cattery.</p>
+        <p>Website Redesigned &amp; Developed with &#9829; by <a href="https://ronybormon.com" target="_blank" rel="noopener noreferrer" style="color: var(--accent-gold); text-decoration: underline; font-weight: 600;">Rony Bormon</a></p>
+        <p>Canton, Georgia · Ethically Raised European Maine Coons</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Sticky Mobile Bottom CTA Bar -->
+  <div class="sticky-mobile-cta" role="complementary" aria-label="Quick Mobile Actions">
+    <a href="tel:+18323317085" class="btn btn-secondary">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+      Call / Text
+    </a>
+    <a href="application-form.html" class="btn btn-primary">
+      Start Application
+    </a>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="backToTopBtn" class="back-to-top" aria-label="Back to top of page" title="Scroll to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maine Coon Kitten Application | Majestic Maine Coon Cats | Georgia</title>
+  <meta name="description" content="Apply to adopt a European Maine Coon kitten from Majestic Maine Coon Cats in Canton, Georgia. Complete questionnaire, housing suitability, color preferences, and agreements.">
+  <link rel="canonical" href="https://majesticmainecooncats.com/application-form/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .app-form-wrap {
+      background: var(--bg-card);
+      border: 1px solid var(--border-gold);
+      border-radius: var(--radius-lg);
+      padding: clamp(1.5rem, 4vw, 3.5rem);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+    }
+    .form-group-title {
+      font-family: var(--font-heading);
+      color: var(--accent-gold);
+      font-size: var(--text-xl);
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 1.25rem;
+    }
+    .form-control-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+    .form-control-wrap label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+    .app-input {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      padding: 0.75rem 1rem;
+      color: var(--text-primary);
+      font-size: 0.95rem;
+      outline: none;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    .app-input:focus {
+      border-color: var(--accent-gold);
+      box-shadow: 0 0 10px rgba(212,175,55,0.2);
+    }
+    .app-checkbox-label {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      color: var(--text-primary);
+      font-size: 0.95rem;
+      cursor: pointer;
+      margin-bottom: 1rem;
+    }
+    .app-checkbox-label input[type="checkbox"] {
+      margin-top: 0.25rem;
+      width: 18px;
+      height: 18px;
+      accent-color: var(--accent-gold);
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand">
+        <img src="images/mmcc_logo_transparent_v2-e1779806650991.webp" alt="Majestic Maine Coon Cats Logo" class="brand-logo-img">
+        <div class="brand-text">
+          <span class="brand-name">Majestic</span>
+          <span class="brand-tagline">Maine Coon Cats</span>
+        </div>
+      </a>
+
+      <nav class="desktop-nav">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="about-us.html" class="nav-link">About Us</a></li>
+          <li class="nav-item">
+            <a href="available-kittens.html" class="nav-link">Kittens <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+            <div class="dropdown-menu">
+              <a href="available-kittens.html" class="dropdown-link">Available Kittens</a>
+              <a href="waiting-list.html" class="dropdown-link">Waiting List</a>
+              <a href="future-pairings.html" class="dropdown-link">Future Pairings</a>
+              <a href="past-kittens.html" class="dropdown-link">Past Kittens</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="adoption-process.html" class="nav-link active">Adoption Process <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+            <div class="dropdown-menu">
+              <a href="adoption-process.html" class="dropdown-link">Adoption Process</a>
+              <a href="application-form.html" class="dropdown-link">Application Form</a>
+              <a href="kitten-contract.html" class="dropdown-link">Maine Coon Kitten Contract</a>
+              <a href="faqs.html" class="dropdown-link">Adoption FAQs</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="kings.html" class="nav-link">Our Cats <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+            <div class="dropdown-menu">
+              <a href="kings.html" class="dropdown-link">Kings (Studs)</a>
+              <a href="queens.html" class="dropdown-link">Queens (Mothers)</a>
+              <a href="retired-adults.html" class="dropdown-link">Retired Adults</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="resources.html" class="nav-link">Resources <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+            <div class="dropdown-menu">
+              <a href="resources.html" class="dropdown-link">Breed Education &amp; Blog</a>
+              <a href="kitten-care-guide.html" class="dropdown-link">Kitten Care Guide</a>
+              <a href="pet-portraits.html" class="dropdown-link">Custom Laser Portraits</a>
+            </div>
+          </li>
+          <li class="nav-item"><a href="contact-us.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Toggle theme">
+          <svg class="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <svg class="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+        <a href="available-kittens.html" class="btn btn-primary btn-sm desktop-only">Available Kittens</a>
+        <button id="mobileToggleBtn" class="mobile-toggle-btn" aria-label="Open menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-backdrop" id="mobileBackdrop"></div>
+  <aside class="mobile-drawer" id="mobileDrawer">
+    <div class="mobile-nav-top">
+      <ul class="mobile-nav-list">
+        <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+        <li><a href="about-us.html" class="mobile-nav-link">About Us</a></li>
+        <li class="mobile-has-submenu">
+          <a href="#" class="mobile-nav-link">Kittens <span>▾</span></a>
+          <div class="mobile-submenu">
+            <a href="available-kittens.html" class="mobile-sub-link">Available Kittens</a>
+            <a href="waiting-list.html" class="mobile-sub-link">Waiting List</a>
+            <a href="future-pairings.html" class="mobile-sub-link">Future Pairings</a>
+            <a href="past-kittens.html" class="mobile-sub-link">Past Kittens</a>
+          </div>
+        </li>
+        <li class="mobile-has-submenu">
+          <a href="#" class="mobile-nav-link">Adoption Process <span>▾</span></a>
+          <div class="mobile-submenu">
+            <a href="adoption-process.html" class="mobile-sub-link">Adoption Process</a>
+            <a href="application-form.html" class="mobile-sub-link">Application Form</a>
+            <a href="kitten-contract.html" class="mobile-sub-link">Maine Coon Kitten Contract</a>
+            <a href="faqs.html" class="mobile-sub-link">Adoption FAQs</a>
+          </div>
+        </li>
+        <li class="mobile-has-submenu">
+          <a href="#" class="mobile-nav-link">Our Cats <span>▾</span></a>
+          <div class="mobile-submenu">
+            <a href="kings.html" class="mobile-sub-link">Kings (Studs)</a>
+            <a href="queens.html" class="mobile-sub-link">Queens (Mothers)</a>
+            <a href="retired-adults.html" class="mobile-sub-link">Retired Adults</a>
+          </div>
+        </li>
+        <li class="mobile-has-submenu">
+          <a href="#" class="mobile-nav-link">Resources <span>▾</span></a>
+          <div class="mobile-submenu">
+            <a href="resources.html" class="mobile-sub-link">Breed Education &amp; Blog</a>
+            <a href="kitten-care-guide.html" class="mobile-sub-link">Kitten Care Guide</a>
+            <a href="pet-portraits.html" class="mobile-sub-link">Custom Laser Portraits</a>
+          </div>
+        </li>
+        <li><a href="contact-us.html" class="mobile-nav-link">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="mobile-nav-bottom">
+      <a href="tel:+18323317085" class="btn btn-secondary" style="width: 100%; margin-bottom: 0.75rem;">Call / Text (832) 331-7085</a>
+      <a href="available-kittens.html" class="btn btn-primary" style="width: 100%;">View Available Kittens</a>
+    </div>
+  </aside>
+
+  <main id="main-content">
+    <!-- Hero / Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="separator">/</span>
+          <a href="application-form.html">Adoption Process</a>
+          <span class="separator">/</span>
+          <span class="current">Application</span>
+        </nav>
+        <span class="section-label">Begin Your Journey</span>
+        <h1 class="section-title" style="font-size: var(--text-4xl);">Maine Coon Adoption Application</h1>
+        <p class="section-subtitle">
+          Tell us about your family and the Maine Coon you’re dreaming of. Pili reads every application personally.
+        </p>
+        <div style="display: flex; gap: 1rem; justify-content: flex-start; flex-wrap: wrap; margin-top: 1.5rem;">
+          <a href="#application-form" class="btn btn-primary btn-sm">Start the Application</a>
+          <a href="kitten-contract.html" class="btn btn-secondary btn-sm">Read the Adoption Contract</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- What We Look For Section -->
+    <section class="section" style="background: var(--bg-surface); border-bottom: 1px solid var(--border-color);">
+      <div class="container">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 3rem; align-items: center;">
+          <div>
+            <span class="section-label">Before You Apply</span>
+            <h2 class="section-title" style="font-size: var(--text-3xl); margin-bottom: 1.25rem;">What We Look For</h2>
+            <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.25rem;">
+              We review every application personally. We’re looking for families who are committed, informed, and ready to provide a Maine Coon with the love and care they deserve.
+            </p>
+            <blockquote style="border-left: 3px solid var(--accent-gold); padding-left: 1.25rem; font-style: italic; color: var(--accent-gold-light); margin: 1.5rem 0 0.5rem; font-family: var(--font-heading); font-size: 1.15rem;">
+              “I don’t just place kittens — I place family members.”
+              <span style="display: block; font-family: var(--font-body); font-style: normal; font-size: 0.85rem; color: var(--text-muted); margin-top: 0.25rem;">— Pili, Founder</span>
+            </blockquote>
+          </div>
+
+          <div style="background: var(--bg-card); border: 1px solid var(--border-gold); border-radius: var(--radius-lg); padding: 2rem 2.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.25);">
+            <h3 style="font-family: var(--font-heading); color: var(--accent-gold); font-size: var(--text-xl); margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.5rem;">
+              <span>✦</span> Key Adoption Criteria
+            </h3>
+            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.85rem; color: var(--text-secondary);">
+              <li style="display: flex; align-items: flex-start; gap: 0.75rem;">
+                <span style="color: var(--accent-gold); font-size: 1.1rem; line-height: 1;">✦</span>
+                <span><strong>A safe, loving indoor home environment</strong> with dedicated vertical play spaces</span>
+              </li>
+              <li style="display: flex; align-items: flex-start; gap: 0.75rem;">
+                <span style="color: var(--accent-gold); font-size: 1.1rem; line-height: 1;">✦</span>
+                <span><strong>Commitment to regular veterinary care</strong> &amp; annual health checkups</span>
+              </li>
+              <li style="display: flex; align-items: flex-start; gap: 0.75rem;">
+                <span style="color: var(--accent-gold); font-size: 1.1rem; line-height: 1;">✦</span>
+                <span><strong>Understanding of Maine Coon needs</strong>: brushing, nutrition, companionship</span>
+              </li>
+              <li style="display: flex; align-items: flex-start; gap: 0.75rem;">
+                <span style="color: var(--accent-gold); font-size: 1.1rem; line-height: 1;">✦</span>
+                <span><strong>Agreement to spay/neuter</strong> (for pet-only placements by 6 months)</span>
+              </li>
+              <li style="display: flex; align-items: flex-start; gap: 0.75rem;">
+                <span style="color: var(--accent-gold); font-size: 1.1rem; line-height: 1;">✦</span>
+                <span><strong>Willingness to honor our adoption contract</strong> and never declaw</span>
+              </li>
+            </ul>
+            <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-color); color: var(--accent-gold); font-size: 0.85rem; font-weight: 500;">
+              ✓ We review every application and respond within 24–48 hours
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Application Form -->
+    <section class="section" id="application-form">
+      <div class="container" style="max-width: 900px;">
+        
+        <div class="section-header" style="text-align: center; margin-bottom: 2.5rem;">
+          <span class="section-label">Adoption Application</span>
+          <h2 class="section-title" style="font-size: var(--text-3xl);">Tell Us About Your Family</h2>
+          <p class="section-subtitle" style="margin: 0 auto; max-width: 600px;">
+            Fields marked with an asterisk (*) are required. The questionnaire takes approximately 5 minutes to complete.
+          </p>
+        </div>
+
+        <form id="kittenApplicationForm" class="app-form-wrap">
+          
+          <!-- 1. Contact Information -->
+          <div style="margin-bottom: 2rem;">
+            <h3 class="form-group-title"><span>✦</span> 1. Your Contact Information</h3>
+            <div class="form-row">
+              <div class="form-control-wrap">
+                <label for="appFirstName">First Name *</label>
+                <input type="text" id="appFirstName" class="app-input" required placeholder="John">
+              </div>
+              <div class="form-control-wrap">
+                <label for="appLastName">Last Name *</label>
+                <input type="text" id="appLastName" class="app-input" required placeholder="Doe">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-control-wrap">
+                <label for="appEmail">Email Address *</label>
+                <input type="email" id="appEmail" class="app-input" required placeholder="name@example.com">
+              </div>
+              <div class="form-control-wrap">
+                <label for="appPhone">Mobile Phone *</label>
+                <input type="tel" id="appPhone" class="app-input" required placeholder="(832) 000-0000">
+              </div>
+              <div class="form-control-wrap">
+                <label for="preferredContact">Preferred Contact Method *</label>
+                <select id="preferredContact" class="app-input" required>
+                  <option value="">Select choice...</option>
+                  <option value="Email">Email</option>
+                  <option value="Text">Text Message</option>
+                  <option value="Phone Call">Phone Call</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-control-wrap" style="grid-column: 1 / -1;">
+                <label for="appAddress">Street Address *</label>
+                <input type="text" id="appAddress" class="app-input" required placeholder="123 Evergreen Terrace">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-control-wrap">
+                <label for="appApt">Apt / Unit (Optional)</label>
+                <input type="text" id="appApt" class="app-input" placeholder="Unit 2A">
+              </div>
+              <div class="form-control-wrap">
+                <label for="appCity">City *</label>
+                <input type="text" id="appCity" class="app-input" required placeholder="Atlanta">
+              </div>
+              <div class="form-control-wrap">
+                <label for="appState">State *</label>
+                <input type="text" id="appState" class="app-input" required placeholder="Georgia">
+              </div>
+              <div class="form-control-wrap">
+                <label for="appZip">Zip Code *</label>
+                <input type="text" id="appZip" class="app-input" required placeholder="30115">
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Home & Living Environment -->
+          <div style="margin-bottom: 2rem;">
+            <h3 class="form-group-title"><span>✦</span> 2. Home &amp; Living Environment</h3>
+            
+            <div class="form-row">
+              <div class="form-control-wrap">
+                <label for="appHousing">Housing Situation *</label>
+                <select id="appHousing" class="app-input" required>
+                  <option value="">Select choice...</option>
+                  <option value="Own Home">Own</option>
+                  <option value="Rent">Rent (Landlord approval required)</option>
+                  <option value="Live with family">Live with family</option>
+                </select>
+              </div>
+              <div class="form-control-wrap">
+                <label for="catAllergies">Any known cat allergies in home? *</label>
+                <select id="catAllergies" class="app-input" required>
+                  <option value="">Select choice...</option>
+                  <option value="No">No</option>
+                  <option value="Yes">Yes</option>
+                  <option value="Unsure">Unsure</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-control-wrap">
+                <label for="currentPets">Current Pets (Names, species &amp; ages)</label>
+                <input type="text" id="currentPets" class="app-input" placeholder="e.g. 1 Golden Retriever (4 yrs), 1 DSH cat (7 yrs)">
+              </div>
+              <div class="form-control-wrap">
+                <label for="vetPhone">Current / Previous Veterinarian Phone</label>
+                <input type="tel" id="vetPhone" class="app-input" placeholder="(555) 123-4567">
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Kitten Preferences -->
+          <div style="margin-bottom: 2rem;">
+            <h3 class="form-group-title"><span>✦</span> 3. Kitten Preferences</h3>
+            
+            <div class="form-row">
+              <div class="form-control-wrap">
+                <label for="specificKitten">Inquiring about a specific kitten?</label>
+                <input type="text" id="specificKitten" class="app-input" placeholder="e.g. Atlas (The Eclipse) or Stella (Retired)">
+              </div>
+              <div class="form-control-wrap">
+                <label for="prefSex">Preferred Sex</label>
+                <select id="prefSex" class="app-input">
+                  <option value="No Preference">No preference</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-control-wrap">
+                <label for="colorPref">Color / Pattern Preferences</label>
+                <input type="text" id="colorPref" class="app-input" placeholder="e.g. Black smoke, silver shaded, blue eyes, polydactyl">
+              </div>
+              <div class="form-control-wrap">
+                <label for="timeline">Adoption Timeline *</label>
+                <select id="timeline" class="app-input" required>
+                  <option value="">Select timeline...</option>
+                  <option value="As soon as possible">As soon as possible</option>
+                  <option value="Next 1-3 months">Next 1–3 months</option>
+                  <option value="6+ months">6+ months (Waiting list)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-control-wrap" style="grid-column: 1 / -1;">
+                <label for="pickupPref">Pickup / Transportation Preference *</label>
+                <select id="pickupPref" class="app-input" required>
+                  <option value="">Select preference...</option>
+                  <option value="Pickup at MMCC in Canton, Georgia">Local pickup at MMCC (Canton, Georgia)</option>
+                  <option value="Meet within driving distance">Meet within driving distance (Fee applies)</option>
+                  <option value="Flight nanny cabin delivery">Flight nanny in aircraft cabin (Arranged by buyer)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-control-wrap" style="margin-top: 1rem;">
+              <label for="extraNotes">Anything else you’d like us to know about your home or expectations?</label>
+              <textarea id="extraNotes" class="app-input" rows="3" placeholder="Tell us about your lifestyle, children, experience with large cats..."></textarea>
+            </div>
+          </div>
+
+          <!-- 4. Mandatory Agreements & Signature -->
+          <div style="background: rgba(212,175,55,0.06); border: 1px solid var(--border-gold); border-radius: var(--radius-md); padding: 2rem; margin-bottom: 2rem;">
+            <h3 class="form-group-title" style="border-bottom: none; margin-bottom: 1rem;"><span>✦</span> 4. Policies &amp; Legal Agreements</h3>
+            
+            <label class="app-checkbox-label">
+              <input type="checkbox" required>
+              <span><strong>I am 18 years or older and the primary decision maker for this adoption. *</strong></span>
+            </label>
+
+            <label class="app-checkbox-label">
+              <input type="checkbox" required>
+              <span><strong>I agree to keep the cat strictly indoors (or within a secure, fully enclosed catio) and provide regular veterinary care, nutritious food, mental enrichment, and a safe home. I agree never to declaw. *</strong></span>
+            </label>
+
+            <label class="app-checkbox-label">
+              <input type="checkbox" required>
+              <span><strong>I have read and agree to the MMCC Adoption Policies ($350 non-refundable reservation fee applied toward adoption price, spay/neuter by 6 months for pets). *</strong></span>
+            </label>
+
+            <div class="form-row" style="margin-top: 1.5rem; margin-bottom: 0;">
+              <div class="form-control-wrap">
+                <label for="legalSignature">Type Full Legal Name as Electronic Signature *</label>
+                <input type="text" id="legalSignature" class="app-input" required placeholder="John Doe">
+              </div>
+              <div class="form-control-wrap">
+                <label for="appDate">Date *</label>
+                <input type="date" id="appDate" class="app-input" required>
+              </div>
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <div style="text-align: center;">
+            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; max-width: 450px; padding: 1.1rem 2rem;">
+              Submit Application
+            </button>
+            <p style="color: var(--text-muted); font-size: var(--text-xs); margin-top: 0.75rem;">
+              Pili will review your questionnaire and contact you personally within 24–48 hours.
+            </p>
+          </div>
+
+          <!-- Success Alert State -->
+          <div id="applicationSuccessState" style="display: none; background: rgba(34,197,94,0.1); border: 1px solid #22c55e; border-radius: var(--radius-md); padding: 2rem; text-align: center; margin-top: 2rem;">
+            <div style="font-size: 3rem; color: #22c55e; margin-bottom: 0.5rem;">✓</div>
+            <h3 style="font-family: var(--font-heading); color: var(--text-primary); font-size: var(--text-2xl); margin-bottom: 0.5rem;">Application Successfully Submitted!</h3>
+            <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto 1.5rem; line-height: 1.7;">
+              Thank you! Pili has received your questionnaire. You will receive an email or text confirmation within 24–48 hours regarding approval, available kittens, and next steps.
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+              <a href="available-kittens.html" class="btn btn-primary btn-sm">Browse Available Kittens</a>
+              <a href="kitten-contract.html" class="btn btn-secondary btn-sm">Preview Kitten Contract</a>
+            </div>
+          </div>
+
+        </form>
+
+      </div>
+    </section>
+
+    <!-- Helpful Links -->
+    <section class="section" style="background: var(--bg-surface); border-top: 1px solid var(--border-color); text-align: center;">
+      <div class="container" style="max-width: 800px;">
+        <span class="section-label">Helpful Before You Apply</span>
+        <h2 class="section-title" style="font-size: var(--text-3xl); margin-bottom: 1rem;">Have Questions First?</h2>
+        <p style="color: var(--text-secondary); font-size: var(--text-lg); line-height: 1.7; margin-bottom: 2rem;">
+          Read our contract, browse the FAQ, or learn how adoption works. We take great care in matching every kitten with the right family.
+        </p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="kitten-contract.html" class="btn btn-secondary">View Contract</a>
+          <a href="faqs.html" class="btn btn-secondary">Adoption FAQs</a>
+          <a href="queens.html" class="btn btn-secondary">Meet Our Queens</a>
+          <a href="kings.html" class="btn btn-secondary">Meet Our Kings</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-col-brand">
+          <div class="brand footer-brand">
+            <img src="images/mmcc_logo_transparent_v2-e1779806650991.webp" alt="Majestic Maine Coon Cats Logo" class="brand-logo-img">
+            <div class="brand-text">
+              <span class="brand-name">Majestic</span>
+              <span class="brand-tagline">Maine Coon Cats</span>
+            </div>
+          </div>
+          <p class="footer-desc">
+            Ethical breeder of European Maine Coon cats in Canton, Georgia. TICA and CFA registered cattery dedicated to health, wild feral beauty, and dog-like companion temperaments.
+          </p>
+          <div class="footer-badges">
+            <span class="cert-pill">TICA Registered</span>
+            <span class="cert-pill">CFA Cattery</span>
+            <span class="cert-pill">DNA Tested Lines</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-title">Kittens &amp; Parents</h4>
+          <ul class="footer-links">
+            <li><a href="available-kittens.html" class="footer-link">Available Kittens</a></li>
+            <li><a href="waiting-list.html" class="footer-link">Waiting List</a></li>
+            <li><a href="future-pairings.html" class="footer-link">Future Pairings</a></li>
+            <li><a href="past-kittens.html" class="footer-link">Past Kittens</a></li>
+            <li><a href="kings.html" class="footer-link">Our Kings</a></li>
+            <li><a href="queens.html" class="footer-link">Our Queens</a></li>
+            <li><a href="retired-adults.html" class="footer-link">Retired Adults</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-title">Adoption &amp; Info</h4>
+          <ul class="footer-links">
+            <li><a href="about-us.html" class="footer-link">About Our Cattery</a></li>
+            <li><a href="application-form.html" class="footer-link">Application Form</a></li>
+            <li><a href="kitten-contract.html" class="footer-link">Maine Coon Contract</a></li>
+            <li><a href="faqs.html" class="footer-link">Frequently Asked Questions</a></li>
+            <li><a href="kitten-care-guide.html" class="footer-link">Kitten Care Guide</a></li>
+            <li><a href="pet-portraits.html" class="footer-link">Custom Laser Portraits</a></li>
+            <li><a href="resources.html" class="footer-link">Blog &amp; Breed Insights</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-title">Contact &amp; Location</h4>
+          <p class="footer-contact-item">
+            <strong>Location:</strong> Canton, Georgia, USA
+          </p>
+          <p class="footer-contact-item">
+            <strong>Phone / Text:</strong> <a href="tel:+18323317085" class="footer-link">+1 (832) 331-7085</a>
+          </p>
+          <p class="footer-contact-item">
+            <strong>Email:</strong> <a href="mailto:pili@majesticmainecooncats.com" class="footer-link">pili@majesticmainecooncats.com</a>
+          </p>
+          <div class="social-links" style="margin-top: 1rem; display: flex; gap: 0.75rem;">
+            <a href="https://www.facebook.com/MajesticMaineCoonCats/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95C18.05 21.45 22 17.19 22 12z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/majesticmainecooncats/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://www.youtube.com/channel/UC4Lv4lbCrI6nHVwVmNrjK8Q/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+            <a href="https://www.tiktok.com/@majesticmainecooncats" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="TikTok">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.82 4.49 6.3 6.3 0 0 0 1.87-4.49V8.62a8.28 8.28 0 0 0 4.84 1.57V6.74a4.84 4.84 0 0 1-.94-.05z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Majestic Maine Coon Cats. All rights reserved. TICA &amp; CFA Registered Cattery.</p>
+        <p>Website Redesigned &amp; Developed with &#9829; by <a href="https://ronybormon.com" target="_blank" rel="noopener noreferrer" style="color: var(--accent-gold); text-decoration: underline; font-weight: 600;">Rony Bormon</a></p>
+        <p>Canton, Georgia · Ethically Raised European Maine Coons</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Sticky Mobile Bottom CTA Bar -->
+  <div class="sticky-mobile-cta" role="complementary" aria-label="Quick Mobile Actions">
+    <a href="tel:+18323317085" class="btn btn-secondary">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+      Call / Text
+    </a>
+    <a href="available-kittens.html" class="btn btn-primary">
+      Reserve a Kitten
+    </a>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="backToTopBtn" class="back-to-top" aria-label="Back to top of page" title="Scroll to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Autofill today's date
+    const dInput = document.getElementById('appDate');
+    if (dInput) dInput.value = new Date().toISOString().split('T')[0];
+
+    // Form submission
+    const aForm = document.getElementById('kittenApplicationForm');
+    const aSuccess = document.getElementById('applicationSuccessState');
+    if (aForm) {
+      aForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        window.scrollTo({ top: aForm.offsetTop - 80, behavior: 'smooth' });
+        aSuccess.style.display = 'block';
+        aForm.querySelector('button[type="submit"]').disabled = true;
+        aForm.querySelector('button[type="submit"]').textContent = 'Application Received';
+        aForm.querySelector('button[type="submit"]').style.background = '#22c55e';
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Laser-Engraved Pet Portraits | Majestic Maine Coon Cats</title>
+  <meta name="description" content="Custom laser-engraved wood pet portraits of your cat or dog. Handcrafted on real maple or white birch plywood. Includes custom pet name and display stand.">
+  <link rel="canonical" href="https://majesticmainecooncats.com/custom-pet-portraits/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .pricing-card-wrap {
+      background: var(--bg-card);
+      border: 1px solid var(--border-gold);
+      border-radius: var(--radius-lg);
+      padding: 2.25rem 2rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .pricing-card-wrap:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(212,175,55,0.15);
+    }
+    .pricing-amount {
+      font-family: var(--font-heading);
+      font-size: var(--text-4xl);
+      color: var(--accent-gold);
+      font-weight: 700;
+      margin: 1rem 0;
+    }
+    .engraving-gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .engraving-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      cursor: pointer;
+      transition: border-color 0.3s ease, transform 0.3s ease;
+    }
+    .engraving-card:hover {
+      border-color: var(--accent-gold);
+      transform: translateY(-3px);
+    }
+    .engraving-img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .engraving-card:hover .engraving-img {
+      transform: scale(1.03);
+    }
+    .engraving-caption {
+      padding: 1rem 1.25rem;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      border-top: 1px solid var(--border-color);
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand">
+        <img src="images/mmcc_logo_transparent_v2-e1779806650991.webp" alt="Majestic Maine Coon Cats Logo" class="brand-logo-img">
+        <div class="brand-text">
+          <span class="brand-name">Majestic</span>
+          <span class="brand-tagline">Maine Coon Cats</span>
+        </div>
+      </a>
+
+      <nav class="desktop-nav">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="about-us.html" class="nav-link">About Us</a></li>
+          <li class="nav-item">
+            <a href="available-kittens.html" class="nav-link">Kittens <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+            <div class="dropdown-menu">
+              <a href="available-kittens.html" class="dropdown-link">Available Kittens</a>
+              <a href="waiting-list.html" class="dropdown-link">Waiting List</a>
+              <a href="future-pairings.html" class="dropdown-link">Future Pairings</a>
+              <a href="past-kittens.html" class="dropdown-link">Past Kittens</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="adoption-process.html" class="nav-link">Adoption Process <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+            <div class="dropdown-menu">
+              <a href="adoption-process.html" class="dropdown-link">Adoption Process</a>
+              <a href="application-form.html" class="dropdown-link">Application Form</a>
+              <a href="kitten-contract.html" class="dropdown-link">Maine Coon Kitten Contract</a>
+              <a href="faqs.html" class="dropdown-link">Adoption FAQs</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="kings.html" class="nav-link">Our Cats <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+            <div class="dropdown-menu">
+              <a href="kings.html" class="dropdown-link">Kings (Studs)</a>
+              <a href="queens.html" class="dropdown-link">Queens (Mothers)</a>
+              <a href="retired-adults.html" class="dropdown-link">Retired Adults</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="resources.html" class="nav-link active">Resources <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+            <div class="dropdown-menu">
+              <a href="resources.html" class="dropdown-link">Breed Education &amp; Blog</a>
+              <a href="kitten-care-guide.html" class="dropdown-link">Kitten Care Guide</a>
+              <a href="pet-portraits.html" class="dropdown-link">Custom Laser Portraits</a>
+            </div>
+          </li>
+          <li class="nav-item"><a href="contact-us.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Toggle theme">
+          <svg class="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <svg class="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+        <a href="available-kittens.html" class="btn btn-primary btn-sm desktop-only">Available Kittens</a>
+        <button id="mobileToggleBtn" class="mobile-toggle-btn" aria-label="Open menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-backdrop" id="mobileBackdrop"></div>
+  <aside class="mobile-drawer" id="mobileDrawer">
+    <div class="mobile-nav-top">
+      <ul class="mobile-nav-list">
+        <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+        <li><a href="about-us.html" class="mobile-nav-link">About Us</a></li>
+        <li class="mobile-has-submenu">
+          <a href="#" class="mobile-nav-link">Kittens <span>▾</span></a>
+          <div class="mobile-submenu">
+            <a href="available-kittens.html" class="mobile-sub-link">Available Kittens</a>
+            <a href="waiting-list.html" class="mobile-sub-link">Waiting List</a>
+            <a href="future-pairings.html" class="mobile-sub-link">Future Pairings</a>
+            <a href="past-kittens.html" class="mobile-sub-link">Past Kittens</a>
+          </div>
+        </li>
+        <li class="mobile-has-submenu">
+          <a href="#" class="mobile-nav-link">Adoption Process <span>▾</span></a>
+          <div class="mobile-submenu">
+            <a href="adoption-process.html" class="mobile-sub-link">Adoption Process</a>
+            <a href="application-form.html" class="mobile-sub-link">Application Form</a>
+            <a href="kitten-contract.html" class="mobile-sub-link">Maine Coon Kitten Contract</a>
+            <a href="faqs.html" class="mobile-sub-link">Adoption FAQs</a>
+          </div>
+        </li>
+        <li class="mobile-has-submenu">
+          <a href="#" class="mobile-nav-link">Our Cats <span>▾</span></a>
+          <div class="mobile-submenu">
+            <a href="kings.html" class="mobile-sub-link">Kings (Studs)</a>
+            <a href="queens.html" class="mobile-sub-link">Queens (Mothers)</a>
+            <a href="retired-adults.html" class="mobile-sub-link">Retired Adults</a>
+          </div>
+        </li>
+        <li class="mobile-has-submenu">
+          <a href="#" class="mobile-nav-link">Resources <span>▾</span></a>
+          <div class="mobile-submenu">
+            <a href="resources.html" class="mobile-sub-link">Breed Education &amp; Blog</a>
+            <a href="kitten-care-guide.html" class="mobile-sub-link">Kitten Care Guide</a>
+            <a href="pet-portraits.html" class="mobile-sub-link">Custom Laser Portraits</a>
+          </div>
+        </li>
+        <li><a href="contact-us.html" class="mobile-nav-link">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="mobile-nav-bottom">
+      <a href="tel:+18323317085" class="btn btn-secondary" style="width: 100%; margin-bottom: 0.75rem;">Call / Text (832) 331-7085</a>
+      <a href="available-kittens.html" class="btn btn-primary" style="width: 100%;">View Available Kittens</a>
+    </div>
+  </aside>
+
+  <main id="main-content">
+    <!-- Hero / Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="separator">/</span>
+          <a href="resources.html">Resources</a>
+          <span class="separator">/</span>
+          <span class="current">Pet Portraits</span>
+        </nav>
+        <span class="section-label">Custom Laser Engraving</span>
+        <h1 class="section-title" style="font-size: var(--text-4xl);">Custom Laser-Engraved Pet Portraits</h1>
+        <p class="section-subtitle">
+          A favorite photo of your cat, dog, or family companion, prepared by hand and engraved on real natural wood. Every piece is made one at a time, so no two are ever the same.
+        </p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem;">
+          <a href="#pricing-section" class="btn btn-primary btn-sm">Sizes &amp; Pricing</a>
+          <a href="#custom-order-form" class="btn btn-secondary btn-sm">Create Your Portrait</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Photo to Wood Highlights -->
+    <section class="section" style="background: var(--bg-surface); border-bottom: 1px solid var(--border-color);">
+      <div class="container">
+        <div class="section-header" style="text-align: center; margin-bottom: 3.5rem;">
+          <span class="section-label">From Photo to Wood</span>
+          <h2 class="section-title" style="font-size: var(--text-3xl);">Pet Portraits Engraved in Real Wood</h2>
+          <p class="section-subtitle" style="margin: 0 auto; max-width: 650px;">
+            Your treasured photographs transformed into timeless heirloom wooden art.
+          </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+          <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.75rem;">
+            <h3 style="font-family: var(--font-heading); color: var(--accent-gold); font-size: 1.2rem; margin-bottom: 0.5rem;">Your Photo, in Wood</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin: 0;">A favorite photograph transformed into a meaningful wood portrait with rich natural texture.</p>
+          </div>
+          <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.75rem;">
+            <h3 style="font-family: var(--font-heading); color: var(--accent-gold); font-size: 1.2rem; margin-bottom: 0.5rem;">Cats, Dogs &amp; More</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin: 0;">Each image is prepared individually by hand to preserve the precise facial details that matter most.</p>
+          </div>
+          <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.75rem;">
+            <h3 style="font-family: var(--font-heading); color: var(--accent-gold); font-size: 1.2rem; margin-bottom: 0.5rem;">For Milestones &amp; Memories</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin: 0;">Add personalized names, adoption dates, or heartfelt memorial wording that tells your companion's story.</p>
+          </div>
+          <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.75rem;">
+            <h3 style="font-family: var(--font-heading); color: var(--accent-gold); font-size: 1.2rem; margin-bottom: 0.5rem;">Made One at a Time</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin: 0;">Every piece carries its own unique natural grain pattern and hand-sanded warmth.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works (3 Steps) -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header" style="text-align: center; margin-bottom: 3.5rem;">
+          <span class="section-label">How It Works</span>
+          <h2 class="section-title" style="font-size: var(--text-3xl);">Our Engraving Process</h2>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+          <div style="background: var(--bg-card); border: 1px solid var(--border-gold); border-radius: var(--radius-lg); padding: 2.25rem 2rem; text-align: center;">
+            <div style="width: 50px; height: 50px; border-radius: 50%; background: rgba(212,175,55,0.15); border: 1px solid var(--border-gold); color: var(--accent-gold); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem; font-weight: 700;">01</div>
+            <h3 style="font-family: var(--font-heading); color: var(--text-primary); font-size: 1.25rem; margin-bottom: 0.75rem;">Choose Your Photo</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin: 0;">Start with a sharp, high-resolution, well-lit image that clearly shows your pet's eyes and face.</p>
+          </div>
+
+          <div style="background: var(--bg-card); border: 1px solid var(--border-gold); border-radius: var(--radius-lg); padding: 2.25rem 2rem; text-align: center;">
+            <div style="width: 50px; height: 50px; border-radius: 50%; background: rgba(212,175,55,0.15); border: 1px solid var(--border-gold); color: var(--accent-gold); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem; font-weight: 700;">02</div>
+            <h3 style="font-family: var(--font-heading); color: var(--text-primary); font-size: 1.25rem; margin-bottom: 0.75rem;">Share the Details</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin: 0;">Tell us the plaque size, desired pet name or date, and your preferred wood finish.</p>
+          </div>
+
+          <div style="background: var(--bg-card); border: 1px solid var(--border-gold); border-radius: var(--radius-lg); padding: 2.25rem 2rem; text-align: center;">
+            <div style="width: 50px; height: 50px; border-radius: 50%; background: rgba(212,175,55,0.15); border: 1px solid var(--border-gold); color: var(--accent-gold); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem; font-weight: 700;">03</div>
+            <h3 style="font-family: var(--font-heading); color: var(--text-primary); font-size: 1.25rem; margin-bottom: 0.75rem;">We Create Your Piece</h3>
+            <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin: 0;">Your image is digitally optimized and engraved with precision optics on premium birch or maple.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sizes & Pricing Section -->
+    <section class="section" id="pricing-section" style="background: var(--bg-surface); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+      <div class="container">
+        <div class="section-header" style="text-align: center; margin-bottom: 3.5rem;">
+          <span class="section-label">Sizes &amp; Pricing</span>
+          <h2 class="section-title" style="font-size: var(--text-3xl);">Choose Your Plaque</h2>
+          <p class="section-subtitle" style="margin: 0 auto; max-width: 600px;">
+            Each portrait is prepared from your photo and engraved on real natural wood.
+          </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 1050px; margin: 0 auto;">
+          
+          <!-- Small Plaque -->
+          <div class="pricing-card-wrap">
+            <span style="color: var(--text-muted); font-size: var(--text-sm); font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em;">4.5" x 5.5"</span>
+            <h3 style="font-family: var(--font-heading); color: var(--text-primary); font-size: 1.5rem; margin-top: 0.25rem;">Small Plaque</h3>
+            <div class="pricing-amount">$30</div>
+            <ul style="list-style: none; padding: 0; margin: 0 0 2rem; display: flex; flex-direction: column; gap: 0.75rem; color: var(--text-secondary); font-size: 0.9rem; text-align: left;">
+              <li>✓ Permanent laser engraving</li>
+              <li>✓ Custom pet name included</li>
+              <li>✓ Wooden display stand included</li>
+              <li>✓ Maple or white birch plywood</li>
+            </ul>
+            <a href="#custom-order-form" class="btn btn-primary btn-sm" style="margin-top: auto;">Order Small Portrait</a>
+          </div>
+
+          <!-- Medium Plaque (Popular) -->
+          <div class="pricing-card-wrap" style="border: 2px solid var(--accent-gold); background: linear-gradient(180deg, rgba(212,175,55,0.06), var(--bg-card));">
+            <span class="badge" style="background: var(--accent-gold); color: #1A1712; font-weight: 700; align-self: center; margin-bottom: 0.5rem; padding: 0.25rem 0.75rem; border-radius: var(--radius-full); font-size: 0.75rem;">Most Popular</span>
+            <span style="color: var(--text-muted); font-size: var(--text-sm); font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em;">5.5" x 6.5"</span>
+            <h3 style="font-family: var(--font-heading); color: var(--text-primary); font-size: 1.5rem; margin-top: 0.25rem;">Medium Plaque</h3>
+            <div class="pricing-amount">$39</div>
+            <ul style="list-style: none; padding: 0; margin: 0 0 2rem; display: flex; flex-direction: column; gap: 0.75rem; color: var(--text-secondary); font-size: 0.9rem; text-align: left;">
+              <li>✓ Permanent laser engraving</li>
+              <li>✓ Custom pet name included</li>
+              <li>✓ Wooden display stand included</li>
+              <li>✓ Maple or white birch plywood</li>
+            </ul>
+            <a href="#custom-order-form" class="btn btn-primary btn-sm" style="margin-top: auto;">Order Medium Portrait</a>
+          </div>
+
+          <!-- Large Plaque -->
+          <div class="pricing-card-wrap">
+            <span style="color: var(--text-muted); font-size: var(--text-sm); font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em;">6.5" x 7.5"</span>
+            <h3 style="font-family: var(--font-heading); color: var(--text-primary); font-size: 1.5rem; margin-top: 0.25rem;">Large Plaque</h3>
+            <div class="pricing-amount">$48</div>
+            <ul style="list-style: none; padding: 0; margin: 0 0 2rem; display: flex; flex-direction: column; gap: 0.75rem; color: var(--text-secondary); font-size: 0.9rem; text-align: left;">
+              <li>✓ Permanent laser engraving</li>
+              <li>✓ Custom pet name included</li>
+              <li>✓ Wooden display stand included</li>
+              <li>✓ Maple or white birch plywood</li>
+            </ul>
+            <a href="#custom-order-form" class="btn btn-primary btn-sm" style="margin-top: auto;">Order Large Portrait</a>
+          </div>
+
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.5rem 2rem; max-width: 750px; margin-left: auto; margin-right: auto;">
+          <h4 style="font-family: var(--font-heading); color: var(--accent-gold); font-size: 1.2rem; margin-bottom: 0.5rem;">Looking for something custom?</h4>
+          <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1rem;">
+            Custom sizes, themed engravings, memorial plaques, and personalized decorative pieces are welcome. Tell us what you have in mind for a custom quote.
+          </p>
+          <a href="#custom-order-form" class="btn btn-secondary btn-sm">Request Custom Order</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Engraving Gallery Showcase (All 10 Real Images) -->
+    <section class="section" id="gallery-showcase">
+      <div class="container">
+        <div class="section-header" style="text-align: center; margin-bottom: 3.5rem;">
+          <span class="section-label">Exquisite Craftsmanship</span>
+          <h2 class="section-title" style="font-size: var(--text-3xl);">Maine Coon Engraving Collections</h2>
+          <p class="section-subtitle" style="margin: 0 auto; max-width: 650px;">
+            Click on any piece to open the high-resolution lightbox. Notice the rich contrasts and wood grain details.
+          </p>
+        </div>
+
+        <div class="engraving-gallery-grid">
+          
+          <div class="engraving-card reveal-on-scroll" data-lightbox data-full="images/blue-cat-engraving-opt-768x614.webp" data-caption="Blue cat Maine Coon kitten engraving on real maple wood">
+            <img src="images/blue-cat-engraving-opt-768x614.webp" alt="Blue cat Maine Coon kitten engraving" class="engraving-img" loading="lazy">
+            <div class="engraving-caption">Blue Maine Coon Kitten Portrait</div>
+          </div>
+
+          <div class="engraving-card reveal-on-scroll" data-lightbox data-full="images/dog-engraving.webp" data-caption="Dog engraving with a heart shape keepsake">
+            <img src="images/dog-engraving.webp" alt="Dog engraving with a heart shape" class="engraving-img" loading="lazy">
+            <div class="engraving-caption">Heart-Shaped Dog Companion Plaque</div>
+          </div>
+
+          <div class="engraving-card reveal-on-scroll" data-lightbox data-full="images/Black-and-white-cat-engriving-opt-768x614.webp" data-caption="Black and white Maine Coon kitten engraving">
+            <img src="images/Black-and-white-cat-engriving-opt-768x614.webp" alt="Black and white Maine Coon kitten engraving" class="engraving-img" loading="lazy">
+            <div class="engraving-caption">Black &amp; White Tuxedo Kitten</div>
+          </div>
+
+          <div class="engraving-card reveal-on-scroll" data-lightbox data-full="images/Black-smoke-adult-engraving-opt-768x614.webp" data-caption="Black smoke Maine Coon adult engraving">
+            <img src="images/Black-smoke-adult-engraving-opt-768x614.webp" alt="Black smoke Maine Coon adult engraving" class="engraving-img" loading="lazy">
+            <div class="engraving-caption">Adult Black Smoke King Engraving</div>
+          </div>
+
+          <div class="engraving-card reveal-on-scroll" data-lightbox data-full="images/cat-engraving-opt-768x614.webp" data-caption="Black smoke Maine Coon kitten engraved">
+            <img src="images/cat-engraving-opt-768x614.webp" alt="Black smoke Maine Coon kitten engraved" class="engraving-img" loading="lazy">
+            <div class="engraving-caption">Playful Smoke Kitten Keepsake</div>
+          </div>
+
+          <div class="engraving-card reveal-on-scroll" data-lightbox data-full="images/CC850A49-592B-40C6-90CE-F575629CE161-opt-768x614.webp" data-caption="Engraving of a black silver Maine Coon kitten">
+            <img src="images/CC850A49-592B-40C6-90CE-F575629CE161-opt-768x614.webp" alt="Engraving of a black silver Maine Coon kitten" class="engraving-img" loading="lazy">
+            <div class="engraving-caption">Black Silver Maine Coon Portrait</div>
+          </div>
+
+          <div class="engraving-card reveal-on-scroll" data-lightbox data-full="images/wood-engriving-black-white.webp" data-caption="Wood engraving black white Maine Coon kitten sitting pretty">
+            <img src="images/wood-engriving-black-white.webp" alt="Wood engraving black white Maine Coon kitten sitting pretty" class="engraving-img" loading="lazy">
+            <div class="engraving-caption">Sitting Pretty Kitten Plaque</div>
+          </div>
+
+          <div class="engraving-card reveal-on-scroll" data-lightbox data-full="images/wood-engriving-black-smoke-opt-768x1024.webp" data-caption="Wood engraving black smoke Maine Coon cat">
+            <img src="images/wood-engriving-black-smoke-opt-768x1024.webp" alt="Wood engraving black smoke Maine Coon cat" class="engraving-img" loading="lazy">
+            <div class="engraving-caption">Regal Lion-Mane Wood Portrait</div>
+          </div>
+
+          <div class="engraving-card reveal-on-scroll" data-lightbox data-full="images/wood-engriving-black-and-white-kitten-opt-768x1024.webp" data-caption="Wood engraving black and white Maine Coon kitten">
+            <img src="images/wood-engriving-black-and-white-kitten-opt-768x1024.webp" alt="Wood engraving black and white Maine Coon kitten" class="engraving-img" loading="lazy">
+            <div class="engraving-caption">Detailed Fur Texture Engraving</div>
+          </div>
+
+          <div class="engraving-card reveal-on-scroll" data-lightbox data-full="images/wood-engriving-back-and-white-opt-768x1024.webp" data-caption="Wood engraving back and white Maine Coon cat with wooden stand">
+            <img src="images/wood-engriving-back-and-white-opt-768x1024.webp" alt="Wood engraving back and white Maine Coon cat" class="engraving-img" loading="lazy">
+            <div class="engraving-caption">Completed Plaque with Display Stand</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Custom Engraving FAQs -->
+    <section class="section" style="background: var(--bg-surface); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+      <div class="container" style="max-width: 850px;">
+        <div class="section-header" style="text-align: center; margin-bottom: 3rem;">
+          <span class="section-label">Common Questions</span>
+          <h2 class="section-title" style="font-size: var(--text-3xl);">Custom Engraving FAQs</h2>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+          <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.5rem;">
+            <h3 style="font-family: var(--font-heading); color: var(--accent-gold); font-size: 1.15rem; margin-bottom: 0.5rem;">What kind of photo works best?</h3>
+            <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem; margin: 0;">
+              Choose the original, highest-quality digital photo available. Bright, sharp images with your pet's eyes and face clearly illuminated in natural light produce the richest, most detailed wood burns. Avoid screenshots, heavy social media filters, motion blur, and photos where the subject is far away.
+            </p>
+          </div>
+
+          <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.5rem;">
+            <h3 style="font-family: var(--font-heading); color: var(--accent-gold); font-size: 1.15rem; margin-bottom: 0.5rem;">Does the photo background matter?</h3>
+            <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem; margin: 0;">
+              A simple background is helpful, but not required! We digitally crop and prepare every subject by hand, isolating your pet so the focus remains entirely on their expression.
+            </p>
+          </div>
+
+          <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.5rem;">
+            <h3 style="font-family: var(--font-heading); color: var(--accent-gold); font-size: 1.15rem; margin-bottom: 0.5rem;">Will every engraving look exactly the same?</h3>
+            <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem; margin: 0;">
+              No two pieces of wood are identical. Natural differences in tree grain, warmth, and density are part of the authentic character of a handmade engraving and make every single piece a true original.
+            </p>
+          </div>
+
+          <div style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.5rem;">
+            <h3 style="font-family: var(--font-heading); color: var(--accent-gold); font-size: 1.15rem; margin-bottom: 0.5rem;">Can you create something other than a pet portrait?</h3>
+            <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem; margin: 0;">
+              Yes! Themed engravings, family keepsakes, wedding signs, memorial plaques, and custom gifts can all be designed upon request.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Custom Order Inquiry Form -->
+    <section class="section" id="custom-order-form">
+      <div class="container" style="max-width: 800px;">
+        <div class="section-header" style="text-align: center; margin-bottom: 2.5rem;">
+          <span class="section-label">Custom Orders</span>
+          <h2 class="section-title" style="font-size: var(--text-3xl);">Have a Photo in Mind?</h2>
+          <p class="section-subtitle" style="margin: 0 auto; max-width: 550px;">
+            Tell us what you would like to create, and we will help you choose the best next step.
+          </p>
+        </div>
+
+        <form id="portraitOrderForm" style="background: var(--bg-card); border: 1px solid var(--border-gold); border-radius: var(--radius-lg); padding: clamp(1.5rem, 4vw, 3rem);">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; margin-bottom: 1.25rem;">
+            <div style="display: flex; flex-direction: column; gap: 0.4rem;">
+              <label for="pName" style="font-size: 0.85rem; font-weight: 600;">Your Full Name *</label>
+              <input type="text" id="pName" required style="background: var(--bg-surface); border: 1px solid var(--border-color); padding: 0.75rem 1rem; border-radius: var(--radius-sm); color: var(--text-primary); outline: none;">
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 0.4rem;">
+              <label for="pEmail" style="font-size: 0.85rem; font-weight: 600;">Email Address *</label>
+              <input type="email" id="pEmail" required style="background: var(--bg-surface); border: 1px solid var(--border-color); padding: 0.75rem 1rem; border-radius: var(--radius-sm); color: var(--text-primary); outline: none;">
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.25rem; margin-bottom: 1.25rem;">
+            <div style="display: flex; flex-direction: column; gap: 0.4rem;">
+              <label for="pSize" style="font-size: 0.85rem; font-weight: 600;">Preferred Plaque Size *</label>
+              <select id="pSize" required style="background: var(--bg-surface); border: 1px solid var(--border-color); padding: 0.75rem 1rem; border-radius: var(--radius-sm); color: var(--text-primary); outline: none;">
+                <option value="Small Plaque 4.5x5.5 ($30)">Small Plaque 4.5" x 5.5" ($30)</option>
+                <option value="Medium Plaque 5.5x6.5 ($39)" selected>Medium Plaque 5.5" x 6.5" ($39) - Popular</option>
+                <option value="Large Plaque 6.5x7.5 ($48)">Large Plaque 6.5" x 7.5" ($48)</option>
+                <option value="Custom Size / Memorial Plaque">Custom Size / Memorial Plaque</option>
+              </select>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 0.4rem;">
+              <label for="petName" style="font-size: 0.85rem; font-weight: 600;">Pet Name to Engrave</label>
+              <input type="text" id="petName" placeholder="e.g. Leo" style="background: var(--bg-surface); border: 1px solid var(--border-color); padding: 0.75rem 1rem; border-radius: var(--radius-sm); color: var(--text-primary); outline: none;">
+            </div>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1.5rem;">
+            <label for="pNotes" style="font-size: 0.85rem; font-weight: 600;">Custom Text, Dates, or Details</label>
+            <textarea id="pNotes" rows="3" placeholder="Tell us if you'd like a date, brief message, or if you will be emailing a high-res photo..." style="background: var(--bg-surface); border: 1px solid var(--border-color); padding: 0.75rem 1rem; border-radius: var(--radius-sm); color: var(--text-primary); outline: none;"></textarea>
+          </div>
+
+          <div style="text-align: center;">
+            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; max-width: 400px; padding: 1.1rem 2rem;">
+              Send Custom Request
+            </button>
+            <p style="color: var(--text-muted); font-size: var(--text-xs); margin-top: 0.75rem;">
+              We will contact you via email to review your photo and provide digital proof.
+            </p>
+          </div>
+
+          <div id="portraitSuccessState" style="display: none; background: rgba(34,197,94,0.1); border: 1px solid #22c55e; border-radius: var(--radius-md); padding: 1.5rem; text-align: center; margin-top: 1.5rem;">
+            <div style="font-size: 2.5rem; color: #22c55e;">✓</div>
+            <h3 style="font-family: var(--font-heading); color: var(--text-primary); font-size: 1.5rem; margin-bottom: 0.5rem;">Custom Request Received!</h3>
+            <p style="color: var(--text-secondary); margin: 0; font-size: 0.95rem;">
+              Thank you! We will reply to your email shortly with image submission guidelines and digital proof details.
+            </p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-col-brand">
+          <div class="brand footer-brand">
+            <img src="images/mmcc_logo_transparent_v2-e1779806650991.webp" alt="Majestic Maine Coon Cats Logo" class="brand-logo-img">
+            <div class="brand-text">
+              <span class="brand-name">Majestic</span>
+              <span class="brand-tagline">Maine Coon Cats</span>
+            </div>
+          </div>
+          <p class="footer-desc">
+            Ethical breeder of European Maine Coon cats in Canton, Georgia. TICA and CFA registered cattery dedicated to health, wild feral beauty, and dog-like companion temperaments.
+          </p>
+          <div class="footer-badges">
+            <span class="cert-pill">TICA Registered</span>
+            <span class="cert-pill">CFA Cattery</span>
+            <span class="cert-pill">DNA Tested Lines</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-title">Kittens &amp; Parents</h4>
+          <ul class="footer-links">
+            <li><a href="available-kittens.html" class="footer-link">Available Kittens</a></li>
+            <li><a href="waiting-list.html" class="footer-link">Waiting List</a></li>
+            <li><a href="future-pairings.html" class="footer-link">Future Pairings</a></li>
+            <li><a href="past-kittens.html" class="footer-link">Past Kittens</a></li>
+            <li><a href="kings.html" class="footer-link">Our Kings</a></li>
+            <li><a href="queens.html" class="footer-link">Our Queens</a></li>
+            <li><a href="retired-adults.html" class="footer-link">Retired Adults</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-title">Adoption &amp; Info</h4>
+          <ul class="footer-links">
+            <li><a href="about-us.html" class="footer-link">About Our Cattery</a></li>
+            <li><a href="application-form.html" class="footer-link">Application Form</a></li>
+            <li><a href="kitten-contract.html" class="footer-link">Maine Coon Contract</a></li>
+            <li><a href="faqs.html" class="footer-link">Frequently Asked Questions</a></li>
+            <li><a href="kitten-care-guide.html" class="footer-link">Kitten Care Guide</a></li>
+            <li><a href="pet-portraits.html" class="footer-link">Custom Laser Portraits</a></li>
+            <li><a href="resources.html" class="footer-link">Blog &amp; Breed Insights</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-title">Contact &amp; Location</h4>
+          <p class="footer-contact-item">
+            <strong>Location:</strong> Canton, Georgia, USA
+          </p>
+          <p class="footer-contact-item">
+            <strong>Phone / Text:</strong> <a href="tel:+18323317085" class="footer-link">+1 (832) 331-7085</a>
+          </p>
+          <p class="footer-contact-item">
+            <strong>Email:</strong> <a href="mailto:pili@majesticmainecooncats.com" class="footer-link">pili@majesticmainecooncats.com</a>
+          </p>
+          <div class="social-links" style="margin-top: 1rem; display: flex; gap: 0.75rem;">
+            <a href="https://www.facebook.com/MajesticMaineCoonCats/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95C18.05 21.45 22 17.19 22 12z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/majesticmainecooncats/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://www.youtube.com/channel/UC4Lv4lbCrI6nHVwVmNrjK8Q/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+            <a href="https://www.tiktok.com/@majesticmainecooncats" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="TikTok">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.298-.002.595.042.88.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 3 15.66a6.34 6.34 0 0 0 10.82 4.49 6.3 6.3 0 0 0 1.87-4.49V8.62a8.28 8.28 0 0 0 4.84 1.57V6.74a4.84 4.84 0 0 1-.94-.05z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Majestic Maine Coon Cats. All rights reserved. TICA &amp; CFA Registered Cattery.</p>
+        <p>Website Redesigned &amp; Developed with &#9829; by <a href="https://ronybormon.com" target="_blank" rel="noopener noreferrer" style="color: var(--accent-gold); text-decoration: underline; font-weight: 600;">Rony Bormon</a></p>
+        <p>Canton, Georgia · Ethically Raised European Maine Coons</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Sticky Mobile Bottom CTA Bar -->
+  <div class="sticky-mobile-cta" role="complementary" aria-label="Quick Mobile Actions">
+    <a href="tel:+18323317085" class="btn btn-secondary">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+      Call / Text
+    </a>
+    <a href="available-kittens.html" class="btn btn-primary">
+      Reserve a Kitten
+    </a>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="backToTopBtn" class="back-to-top" aria-label="Back to top of page" title="Scroll to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+
+  <!-- Lightbox Modal -->
+  <div class="modal-backdrop" id="accessibleLightbox" role="dialog" aria-modal="true" aria-label="Image viewer lightbox" tabindex="-1">
+    <button class="modal-close-btn" aria-label="Close image viewer" title="Close (Esc)">&times;</button>
+    <button class="lightbox-nav-btn lightbox-prev" aria-label="Previous image" title="Previous (Left Arrow)">&#10094;</button>
+    <button class="lightbox-nav-btn lightbox-next" aria-label="Next image" title="Next (Right Arrow)">&#10095;</button>
+    <div class="lightbox-content">
+      <div class="lightbox-img-wrapper">
+        <img src="" alt="" class="lightbox-img">
+      </div>
+      <div class="lightbox-info">
+        <div class="lightbox-counter" aria-live="polite"></div>
+        <div class="lightbox-caption"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script>
+    const pForm = document.getElementById('portraitOrderForm');
+    const pSuccess = document.getElementById('portraitSuccessState');
+    if (pForm) {
+      pForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        pSuccess.style.display = 'block';
+        pForm.querySelector('button[type="submit"]').disabled = true;
+        pForm.querySelector('button[type="submit"]').textContent = 'Inquiry Sent';
+        pForm.querySelector('button[type="submit"]').style.background = '#22c55e';
+      });
+    }
+  </script>
+</body>
+</html>

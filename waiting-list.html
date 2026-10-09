@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maine Coon Kitten Waiting List | Georgia Breeder</title>
+  <meta name="description" content="Join our Maine Coon Kitten Waiting List in Georgia for priority pick, early litter updates, and first access to upcoming kittens.">
+  <link rel="canonical" href="https://majesticmainecooncats.com/maine-coon-kitten-waiting-list/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* ==========================================================================
+       Waiting List Page - Luxury Styled Components
+       ========================================================================== */
+    .wl-steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .wl-step-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-gold);
+      border-radius: var(--radius-lg);
+      padding: 2rem 1.75rem;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      transition: transform var(--transition-smooth), border-color var(--transition-smooth), box-shadow var(--transition-smooth);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    }
+    .wl-step-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--accent-gold-light);
+      box-shadow: 0 14px 35px rgba(212, 175, 55, 0.15);
+    }
+    .wl-step-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.25rem;
+    }
+    .wl-step-icon-wrap {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(212, 175, 55, 0.1);
+      border: 1px solid var(--border-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-gold);
+    }
+    .wl-step-icon-wrap svg {
+      width: 22px;
+      height: 22px;
+    }
+    .wl-step-num {
+      font-family: var(--font-heading);
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--accent-gold);
+      letter-spacing: 0.05em;
+      line-height: 1;
+      opacity: 0.9;
+    }
+    .wl-step-title {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      color: var(--text-primary);
+      margin-bottom: 0.75rem;
+      font-weight: 600;
+    }
+    .wl-step-desc {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    /* Callouts Row */
+    .wl-callout-row {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 1.5rem;
+      margin-bottom: 4rem;
+    }
+    .wl-note-box {
+      background: rgba(212, 175, 55, 0.06);
+      border: 1px solid var(--border-gold);
+      border-left: 4px solid var(--accent-gold);
+      border-radius: var(--radius-md);
+      padding: 1.5rem 1.75rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0.6rem;
+    }
+    .wl-note-box p {
+      margin: 0;
+      font-size: 0.95rem;
+      color: var(--text-primary);
+      line-height: 1.6;
+    }
+    .wl-fee-badge-card {
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(20, 5, 8, 0.9) 100%);
+      border: 1px solid var(--accent-gold);
+      border-radius: var(--radius-md);
+      padding: 1.5rem 1.75rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+    .wl-fee-badge-card h4 {
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      color: var(--accent-gold-light);
+      margin-bottom: 0.5rem;
+      line-height: 1.35;
+    }
+    .wl-fee-badge-card p {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    /* Waiting List Form Wrap */
+    .wl-form-wrap {
+      background: var(--bg-card);
+      border: 1px solid var(--border-gold);
+      border-radius: var(--radius-xl);
+      padding: clamp(2rem, 5vw, 3.5rem);
+      max-width: 920px;
+      margin: 0 auto;
+      box-shadow: 0 15px 45px rgba(0, 0, 0, 0.35);
+      position: relative;
+    }
+    .wl-form-header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    .wl-form-header h2 {
+      font-family: var(--font-heading);
+      font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+      color: var(--text-primary);
+      margin: 0.5rem 0;
+    }
+    .wl-form-header p {
+      color: var(--text-secondary);
+      font-size: 1rem;
+      margin: 0;
+    }
+
+    /* Form Fields Styling */
+    .wl-form-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+    }
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+    .form-label {
+      display: block;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 0.45rem;
+      letter-spacing: 0.01em;
+    }
+    .form-control {
+      width: 100%;
+      padding: 0.85rem 1.15rem;
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      color: var(--text-primary);
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      transition: all var(--transition-fast);
+      outline: none;
+    }
+    .form-control:focus {
+      border-color: var(--accent-gold);
+      background: var(--bg-surface);
+      box-shadow: 0 0 0 3px var(--accent-gold-glow);
+    }
+    .form-control::placeholder {
+      color: var(--text-muted);
+    }
+    select.form-control {
+      cursor: pointer;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23d4af37' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 1rem center;
+      padding-right: 2.5rem;
+    }
+    select.form-control option {
+      background: #1a080d;
+      color: #fff;
+    }
+
+    /* Checkbox & Radio Tiles */
+    .wl-section-divider {
+      margin-top: 1.75rem;
+      margin-bottom: 1.25rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--border-subtle);
+    }
+    .wl-checkbox-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+      gap: 0.75rem;
+      margin-top: 0.5rem;
+    }
+    .wl-radio-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 0.75rem;
+      margin-top: 0.5rem;
+    }
+    .wl-custom-checkbox {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.75rem 1rem;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      transition: all var(--transition-fast);
+      user-select: none;
+    }
+    .wl-custom-checkbox:hover {
+      background: rgba(212, 175, 55, 0.07);
+      border-color: var(--border-gold);
+      color: var(--text-primary);
+    }
+    .wl-custom-checkbox input[type="checkbox"],
+    .wl-custom-checkbox input[type="radio"] {
+      width: 18px;
+      height: 18px;
+      accent-color: var(--accent-gold);
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+    .wl-custom-checkbox:has(input:checked) {
+      background: rgba(212, 175, 55, 0.12);
+      border-color: var(--accent-gold);
+      color: var(--accent-gold-light);
+      font-weight: 500;
+    }
+
+    /* Agreement Box */
+    .wl-agreement-box {
+      background: rgba(212, 175, 55, 0.08);
+      border: 1px solid var(--border-gold);
+      border-radius: var(--radius-md);
+      padding: 1.25rem 1.5rem;
+      margin: 1.75rem 0 2rem;
+    }
+    .wl-agreement-box .wl-custom-checkbox {
+      background: transparent;
+      border: none;
+      padding: 0;
+      color: var(--text-primary);
+    }
+    .wl-agreement-box .wl-custom-checkbox:hover {
+      background: transparent;
+      border: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      .wl-steps-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .wl-callout-row {
+        grid-template-columns: 1fr;
+      }
+    }
+    @media (max-width: 640px) {
+      .wl-steps-grid {
+        grid-template-columns: 1fr;
+      }
+      .wl-form-grid-2 {
+        grid-template-columns: 1fr;
+      }
+      .wl-checkbox-grid {
+        grid-template-columns: 1fr;
+      }
+      .wl-form-wrap {
+        padding: 1.5rem 1.25rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand">
+        <img src="images/mmcc_logo_transparent_v2-e1779806650991.webp" alt="Majestic Maine Coon Cats Logo" class="brand-logo-img">
+        <div class="brand-text">
+          <span class="brand-name">Majestic</span>
+          <span class="brand-tagline">Maine Coon Cats</span>
+        </div>
+      </a>
+
+      <nav class="desktop-nav">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="about-us.html" class="nav-link">About Us</a></li>
+          <li class="nav-item">
+            <a href="available-kittens.html" class="nav-link active">Kittens <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+            <div class="dropdown-menu">
+              <a href="available-kittens.html" class="dropdown-link">Available Kittens</a>
+              <a href="waiting-list.html" class="dropdown-link">Waiting List</a>
+              <a href="future-pairings.html" class="dropdown-link">Future Pairings</a>
+              <a href="past-kittens.html" class="dropdown-link">Past Kittens</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="adoption-process.html" class="nav-link">Adoption Process <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+            <div class="dropdown-menu">
+              <a href="adoption-process.html" class="dropdown-link">Adoption Process</a>
+              <a href="application-form.html" class="dropdown-link">Application Form</a>
+              <a href="kitten-contract.html" class="dropdown-link">Maine Coon Kitten Contract</a>
+              <a href="faqs.html" class="dropdown-link">FAQs</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="kings.html" class="nav-link">Our Cats <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+            <div class="dropdown-menu">
+              <a href="kings.html" class="dropdown-link">Kings</a>
+              <a href="queens.html" class="dropdown-link">Queens</a>
+              <a href="retired-adults.html" class="dropdown-link">Retired Adults</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="resources.html" class="nav-link">Resources <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+            <div class="dropdown-menu">
+              <a href="resources.html" class="dropdown-link">Blog &amp; Insights</a>
+              <a href="kitten-care-guide.html" class="dropdown-link">Kitten Care Guide</a>
+              <a href="pet-portraits.html" class="dropdown-link">Laser-Engraved Pet Portraits</a>
+            </div>
+          </li>
+          <li class="nav-item"><a href="contact-us.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Toggle theme">
+          <svg class="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <svg class="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+        <a href="available-kittens.html" class="btn btn-primary btn-sm desktop-only">Available Kittens</a>
+        <button id="mobileToggleBtn" class="mobile-toggle-btn" aria-label="Open menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-backdrop" id="mobileBackdrop"></div>
+  <aside class="mobile-drawer" id="mobileDrawer">
+    <div class="mobile-nav-top">
+      <ul class="mobile-nav-list">
+        <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+        <li><a href="about-us.html" class="mobile-nav-link">About Us</a></li>
+        <li class="mobile-has-submenu">
+          <a href="#" class="mobile-nav-link">Kittens <span>▾</span></a>
+          <div class="mobile-submenu">
+            <a href="available-kittens.html" class="mobile-sub-link">Available Kittens</a>
+            <a href="waiting-list.html" class="mobile-sub-link">Waiting List</a>
+            <a href="future-pairings.html" class="mobile-sub-link">Future Pairings</a>
+            <a href="past-kittens.html" class="mobile-sub-link">Past Kittens</a>
+          </div>
+        </li>
+        <li class="mobile-has-submenu">
+          <a href="#" class="mobile-nav-link">Adoption Process <span>▾</span></a>
+          <div class="mobile-submenu">
+            <a href="adoption-process.html" class="mobile-sub-link">Adoption Process</a>
+            <a href="application-form.html" class="mobile-sub-link">Application Form</a>
+            <a href="kitten-contract.html" class="mobile-sub-link">Maine Coon Kitten Contract</a>
+            <a href="faqs.html" class="mobile-sub-link">Adoption FAQs</a>
+          </div>
+        </li>
+        <li class="mobile-has-submenu">
+          <a href="#" class="mobile-nav-link">Our Cats <span>▾</span></a>
+          <div class="mobile-submenu">
+            <a href="kings.html" class="mobile-sub-link">Kings (Studs)</a>
+            <a href="queens.html" class="mobile-sub-link">Queens (Mothers)</a>
+            <a href="retired-adults.html" class="mobile-sub-link">Retired Adults</a>
+          </div>
+        </li>
+        <li class="mobile-has-submenu">
+          <a href="#" class="mobile-nav-link">Resources <span>▾</span></a>
+          <div class="mobile-submenu">
+            <a href="resources.html" class="mobile-sub-link">Blog &amp; Categories</a>
+            <a href="kitten-care-guide.html" class="mobile-sub-link">Kitten Care Guide</a>
+            <a href="pet-portraits.html" class="mobile-sub-link">Custom Laser Portraits</a>
+          </div>
+        </li>
+        <li><a href="contact-us.html" class="mobile-nav-link">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="mobile-nav-bottom">
+      <a href="tel:+18323317085" class="btn btn-secondary" style="width: 100%; margin-bottom: 0.75rem;">Call / Text (832) 331-7085</a>
+      <a href="available-kittens.html" class="btn btn-primary" style="width: 100%;">View Available Kittens</a>
+    </div>
+  </aside>
+
+  <main id="main-content">
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="separator">/</span>
+          <a href="available-kittens.html">Kittens</a>
+          <span class="separator">/</span>
+          <span class="current">Waiting List</span>
+        </nav>
+        <span class="section-label">Waiting List</span>
+        <h1 class="section-title" style="font-size: clamp(2.2rem, 4.5vw, 3.5rem);">Reserve Your Future Kitten</h1>
+        <p class="section-subtitle" style="max-width: 780px;">
+          Complete the application form below to secure your spot on our waiting list. Your place in line is confirmed once your reservation fee is received.
+        </p>
+
+        <div style="display: flex; gap: 1rem; justify-content: flex-start; flex-wrap: wrap; margin-top: 2rem;">
+          <a href="#waiting-list-form" class="btn btn-primary btn-lg">Join the Waiting List</a>
+          <a href="available-kittens.html" class="btn btn-secondary btn-lg">See Available Kittens</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- How Our Waiting List Works (6 Steps) -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header text-center reveal-on-scroll">
+          <span class="section-label">Adoption Roadmap</span>
+          <h2 class="section-title">How Our Waiting List Works</h2>
+          <p class="section-subtitle mx-auto">
+            Six simple steps from your application to bringing your kitten home.
+          </p>
+        </div>
+
+        <div class="wl-steps-grid">
+          <!-- Step 01 -->
+          <div class="wl-step-card reveal-on-scroll">
+            <div class="wl-step-header">
+              <div class="wl-step-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+              </div>
+              <span class="wl-step-num">01</span>
+            </div>
+            <h3 class="wl-step-title">Submit Your Application</h3>
+            <p class="wl-step-desc">
+              Fill out the form below and let us know what kind of kitten you’re hoping for — including color, gender, personality, or special traits.
+            </p>
+          </div>
+
+          <!-- Step 02 -->
+          <div class="wl-step-card reveal-on-scroll">
+            <div class="wl-step-header">
+              <div class="wl-step-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"></rect><line x1="2" y1="10" x2="22" y2="10"></line></svg>
+              </div>
+              <span class="wl-step-num">02</span>
+            </div>
+            <h3 class="wl-step-title">Reservation Fee</h3>
+            <p class="wl-step-desc">
+              Once your application is approved, a $350 non-refundable reservation fee is required to secure your spot on the list. The reservation fee will be applied to the kitten price.
+            </p>
+          </div>
+
+          <!-- Step 03 -->
+          <div class="wl-step-card reveal-on-scroll">
+            <div class="wl-step-header">
+              <div class="wl-step-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              </div>
+              <span class="wl-step-num">03</span>
+            </div>
+            <h3 class="wl-step-title">Priority Placement</h3>
+            <p class="wl-step-desc">
+              You will be placed in line based on the date your reservation fee is received. Earlier reservations receive first choice when kittens become available.
+            </p>
+          </div>
+
+          <!-- Step 04 -->
+          <div class="wl-step-card reveal-on-scroll">
+            <div class="wl-step-header">
+              <div class="wl-step-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </div>
+              <span class="wl-step-num">04</span>
+            </div>
+            <h3 class="wl-step-title">Updates &amp; Announcements</h3>
+            <p class="wl-step-desc">
+              You’ll receive priority emails before kittens are publicly listed, including litter announcements, photos, and pairing updates.
+            </p>
+          </div>
+
+          <!-- Step 05 -->
+          <div class="wl-step-card reveal-on-scroll">
+            <div class="wl-step-header">
+              <div class="wl-step-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v4l3 3"></path></svg>
+              </div>
+              <span class="wl-step-num">05</span>
+            </div>
+            <h3 class="wl-step-title">Kitten Selection</h3>
+            <p class="wl-step-desc">
+              When kittens are ready for reservation, we will contact you to match you with your preferred kitten or closest available match.
+            </p>
+          </div>
+
+          <!-- Step 06 -->
+          <div class="wl-step-card reveal-on-scroll">
+            <div class="wl-step-header">
+              <div class="wl-step-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              </div>
+              <span class="wl-step-num">06</span>
+            </div>
+            <h3 class="wl-step-title">Final Adoption</h3>
+            <p class="wl-step-desc">
+              Once your kitten is chosen, you will sign the adoption contract and pay the remaining balance before pickup.
+            </p>
+          </div>
+        </div>
+
+        <!-- Callouts Row -->
+        <div class="wl-callout-row reveal-on-scroll">
+          <div class="wl-note-box">
+            <p>
+              <strong style="color: var(--accent-gold);">Important note:</strong> If you choose to pass on a litter, you will remain on the list and move forward to the next available litter that fits your preferences.
+            </p>
+            <p style="font-size: var(--text-xs); color: var(--text-muted);">
+              ✦ All of our breeding cats are registered with TICA (The International Cat Association).
+            </p>
+          </div>
+
+          <div class="wl-fee-badge-card">
+            <h4>Your spot is secured once your $350 reservation fee is received</h4>
+            <p>The reservation fee is applied toward your kitten’s price. Earlier reservations receive first choice.</p>
+          </div>
+        </div>
+
+        <!-- Waiting List Form -->
+        <div class="wl-form-wrap reveal-on-scroll" id="waiting-list-form">
+          <div class="wl-form-header">
+            <span class="section-label">Waiting List Application</span>
+            <h2>Join the Waiting List</h2>
+            <p>After submitting your application, we will contact you personally with next steps.</p>
+          </div>
+
+          <form id="waitingListApplicationForm">
+            <!-- Name Row -->
+            <div class="wl-form-grid-2">
+              <div class="form-group">
+                <label class="form-label" for="wlFirstName">First Name *</label>
+                <input type="text" id="wlFirstName" name="firstName" class="form-control" placeholder="John" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="wlLastName">Last Name *</label>
+                <input type="text" id="wlLastName" name="lastName" class="form-control" placeholder="Doe" required>
+              </div>
+            </div>
+
+            <!-- Email & Phone Row -->
+            <div class="wl-form-grid-2">
+              <div class="form-group">
+                <label class="form-label" for="wlEmail">Email Address *</label>
+                <input type="email" id="wlEmail" name="email" class="form-control" placeholder="name@example.com" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="wlPhone">Phone Number</label>
+                <input type="tel" id="wlPhone" name="phone" class="form-control" placeholder="(832) 000-0000">
+              </div>
+            </div>
+
+            <!-- Interest Dropdown -->
+            <div class="form-group">
+              <label class="form-label" for="wlInterest">I'm interested in *</label>
+              <select id="wlInterest" name="interest" class="form-control" required>
+                <option value="" disabled selected>--- Select Choice ---</option>
+                <option value="joining-waiting-list">Joining the waiting list</option>
+                <option value="adopting-kitten">Adopting a Maine Coon Kitten</option>
+                <option value="learning-care">Learning about care &amp; essentials</option>
+                <option value="reserving-future">Reserving a future kitten</option>
+                <option value="other-inquiry">Other inquiry</option>
+              </select>
+            </div>
+
+            <!-- Coat Pattern / Color Preference -->
+            <div class="wl-section-divider">
+              <label class="form-label" style="font-size: 0.95rem; margin-bottom: 0.6rem;">
+                ✦ Coat Pattern / Color Preference
+              </label>
+              <div class="wl-checkbox-grid">
+                <label class="wl-custom-checkbox">
+                  <input type="checkbox" name="colorPref" value="black-smoke">
+                  <span>Black Smoke or Solid Black</span>
+                </label>
+                <label class="wl-custom-checkbox">
+                  <input type="checkbox" name="colorPref" value="black-silver">
+                  <span>Black Silver</span>
+                </label>
+                <label class="wl-custom-checkbox">
+                  <input type="checkbox" name="colorPref" value="blue-smoke">
+                  <span>Blue Smoke or Blue</span>
+                </label>
+                <label class="wl-custom-checkbox">
+                  <input type="checkbox" name="colorPref" value="shaded">
+                  <span>Shaded</span>
+                </label>
+                <label class="wl-custom-checkbox">
+                  <input type="checkbox" name="colorPref" value="red">
+                  <span>Red</span>
+                </label>
+                <label class="wl-custom-checkbox">
+                  <input type="checkbox" name="colorPref" value="blue-eye">
+                  <span>Blue Eye</span>
+                </label>
+                <label class="wl-custom-checkbox">
+                  <input type="checkbox" name="colorPref" value="tortie-female">
+                  <span>Tortie Female</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Gender Preference -->
+            <div class="wl-section-divider">
+              <label class="form-label" style="font-size: 0.95rem; margin-bottom: 0.6rem;">
+                ✦ Gender Preference
+              </label>
+              <div class="wl-radio-row">
+                <label class="wl-custom-checkbox">
+                  <input type="radio" name="genderPref" value="male">
+                  <span>Male</span>
+                </label>
+                <label class="wl-custom-checkbox">
+                  <input type="radio" name="genderPref" value="female">
+                  <span>Female</span>
+                </label>
+                <label class="wl-custom-checkbox">
+                  <input type="radio" name="genderPref" value="no-preference" checked>
+                  <span>No Preference</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Questions / Notes -->
+            <div class="form-group" style="margin-top: 1.5rem;">
+              <label class="form-label" for="wlQuestions">
+                Please tell us about your home, family, or any questions:
+              </label>
+              <textarea id="wlQuestions" name="questions" class="form-control" rows="4" placeholder="Tell us about your home, pets, and what kind of kitten personality you are looking for..."></textarea>
+            </div>
+
+            <!-- Newsletter Checkbox -->
+            <div class="form-group" style="margin-top: 1.25rem;">
+              <label class="wl-custom-checkbox">
+                <input type="checkbox" name="mailingList" value="yes" checked>
+                <span><strong>Join Our Mailing List:</strong> Yes, I’d like to receive kitten updates and care tips from Majestic Maine Coon Cats.</span>
+              </label>
+            </div>
+
+            <!-- Agreement Box -->
+            <div class="wl-agreement-box">
+              <label class="wl-custom-checkbox">
+                <input type="checkbox" name="agreement" required>
+                <span>
+                  <strong>Preference Agreement *:</strong> I understand that a $350 non-refundable reservation fee is required to secure my priority spot once my application is approved.
+                </span>
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+              Join the Waiting List
+            </button>
+          </form>
+
+          <!-- Success State -->
+          <div id="wlSuccessState" style="display: none; text-align: center; padding: 3rem 1rem;">
+            <div style="width: 68px; height: 68px; border-radius: 50%; background: rgba(85, 199, 151, 0.15); border: 2px solid #55c797; color: #55c797; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 2rem;">
+              ✓
+            </div>
+            <h3 style="font-family: var(--font-heading); font-size: var(--text-2xl); color: #fff; margin-bottom: 0.75rem;">
+              Application Submitted Successfully!
+            </h3>
+            <p style="color: var(--text-secondary); max-width: 540px; margin: 0 auto 1.75rem; line-height: 1.6;">
+              Thank you for applying to our waiting list. We review each inquiry carefully and will be in touch with you shortly with next steps and reservation instructions.
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+              <a href="available-kittens.html" class="btn btn-primary">Browse Available Kittens</a>
+              <a href="index.html" class="btn btn-secondary">Return Home</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 11. FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <a href="index.html" class="brand" style="margin-bottom: 1.25rem;">
+            <img src="images/mmcc_logo_transparent_v2-e1779806650991.webp" alt="Majestic Maine Coon Cats Logo" class="brand-logo-img">
+            <div class="brand-text">
+              <span class="brand-name">Majestic</span>
+              <span class="brand-tagline">Maine Coon Cats</span>
+            </div>
+          </a>
+          <p class="footer-brand-desc">
+            A boutique TICA and CFA registered European Maine Coon cattery located in Canton, Georgia. Dedicated to health testing, ethical breeding, and affectionate companionship.
+          </p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/MajesticMaineCoonCats/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/majesticmainecooncats/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="https://www.tiktok.com/@majesticmainecooncats" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="TikTok">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 3 15.68 6.34 6.34 0 0 0 9.35 22a6.33 6.33 0 0 0 6.34-6.32V9.37a8.16 8.16 0 0 0 4.9 1.62v-3.5a4.85 4.85 0 0 1-1-.8z"/></svg>
+            </a>
+            <a href="https://www.youtube.com/channel/UC4Lv4lbCrI6nHVwVmNrjK8Q/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.43zM9.75 15.02V8.48l5.75 3.27-5.75 3.27z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="about-us.html" class="footer-link">About Us</a></li>
+            <li><a href="available-kittens.html" class="footer-link">Kittens</a></li>
+            <li><a href="adoption-process.html" class="footer-link">Adoption Process</a></li>
+            <li><a href="faqs.html" class="footer-link">FAQs</a></li>
+            <li><a href="kings.html" class="footer-link">Kings</a></li>
+            <li><a href="queens.html" class="footer-link">Queens</a></li>
+            <li><a href="retired-adults.html" class="footer-link">Retired Adults</a></li>
+            <li><a href="resources.html" class="footer-link">Blog</a></li>
+            <li><a href="contact-us.html" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Adoption &amp; Care</h4>
+          <ul class="footer-links">
+            <li><a href="application-form.html" class="footer-link">Adoption Application</a></li>
+            <li><a href="kitten-contract.html" class="footer-link">Maine Coon Contract</a></li>
+            <li><a href="waiting-list.html" class="footer-link">Join Waiting List</a></li>
+            <li><a href="future-pairings.html" class="footer-link">Future Pairings</a></li>
+            <li><a href="past-kittens.html" class="footer-link">Past Kittens Gallery</a></li>
+            <li><a href="kitten-care-guide.html" class="footer-link">Kitten Care Guide</a></li>
+            <li><a href="pet-portraits.html" class="footer-link">Custom Wood Pet Portraits</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Get in Touch</h4>
+          <ul class="footer-links">
+            <li style="color: var(--text-secondary); font-size: var(--text-sm);">
+              <strong>Location:</strong> Canton, Georgia 30114
+            </li>
+            <li>
+              <a href="tel:+18323317085" class="footer-link">
+                <strong>Call/Text:</strong> +1 (832) 331-7085
+              </a>
+            </li>
+            <li>
+              <a href="mailto:pili@majesticmainecooncats.com" class="footer-link">
+                <strong>Email:</strong> pili@majesticmainecooncats.com
+              </a>
+            </li>
+            <li><a href="contact-us.html" class="footer-link">Contact Form</a></li>
+            <li><a href="available-kittens.html" class="footer-link" style="color: var(--accent-gold); font-weight: 600;">Reserve a Kitten &rarr;</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Majestic Maine Coon Cats. All rights reserved. TICA &amp; CFA Registered Cattery.</p>
+        <p>Website Redesigned &amp; Developed with &#9829; by <a href="https://ronybormon.com" target="_blank" rel="noopener noreferrer" style="color: var(--accent-gold); text-decoration: underline; font-weight: 600;">Rony Bormon</a></p>
+        <p>Canton, Georgia · Ethically Raised European Maine Coons</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Sticky Mobile Bottom CTA Bar -->
+  <div class="sticky-mobile-cta" role="complementary" aria-label="Quick Mobile Actions">
+    <a href="tel:+18323317085" class="btn btn-secondary">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+      Call / Text
+    </a>
+    <a href="#waiting-list-form" class="btn btn-primary">
+      Join Waiting List
+    </a>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="backToTopBtn" class="back-to-top" aria-label="Back to top of page" title="Scroll to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+
+  <script src="js/main.js"></script>
+  <script>
+    const form = document.getElementById('waitingListApplicationForm');
+    const success = document.getElementById('wlSuccessState');
+    if (form) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        form.style.display = 'none';
+        if (success) {
+          success.style.display = 'block';
+          success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      });
+    }
+  </script>
+</body>
+</html>
